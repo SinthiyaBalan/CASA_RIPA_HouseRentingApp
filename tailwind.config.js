@@ -6,8 +6,10 @@ export default {
   ],
 
   theme: {
-    extend: {},
+    extend: {fontFamily: {
+      custom: ['Font Name', 'Aref Ruqaa Ink']},
   },
   plugins: [require("daisyui")],
+},
 }
 
