@@ -32,9 +32,9 @@ function Nav() {
       <li><a>HOME</a></li>
       <li tabIndex={0}>
         <details>
-          <summary>Parent</summary>
+          <summary>ABOUT US</summary>
           <ul className="p-2">
-            <li><a>Submenu 1</a></li>
+            <li><a>Route to Us</a></li>
             <li><a>Submenu 2</a></li>
           </ul>
         </details>
@@ -44,7 +44,7 @@ function Nav() {
     </ul>
   </div>
   <div className="navbar-end gap-4">
-    <a className="btn">Book now</a>
+    <a className="btn bg-green-500 hover:bg-green-600">Book now</a>
     <div className="h-8 w-8 m-2">
     <CIcon icon={icon.cilTranslate} size="sm"/>
     {/* <ul className="menu menu-horizontal px-1">
