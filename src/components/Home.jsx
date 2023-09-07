@@ -18,9 +18,6 @@ function Home() {
   </div>
 </div>
 
-      <div>
-        <h2>Welcome to Casa Ripa</h2>
-      </div>
 
     </div>
     
