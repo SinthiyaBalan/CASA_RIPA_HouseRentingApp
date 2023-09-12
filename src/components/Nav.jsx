@@ -14,10 +14,10 @@ function Nav() {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a>HOME</a></li>
         <li>
-          <a>Parent</a>
+          <a>ABOUT US</a>
           <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a>Route to Us</a></li>
+            <li><a>Gallery</a></li>
           </ul>
         </li>
         <li><a>CONTACT</a></li>
@@ -35,7 +35,7 @@ function Nav() {
           <summary>ABOUT US</summary>
           <ul className="p-2">
             <li><a>Route to Us</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a>Gallery</a></li>
           </ul>
         </details>
       </li>

@@ -2,6 +2,7 @@ import './App.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './components/Home'
+import Review from './components/Review'
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
     <>
     <Nav/>
     <Home/>
+    <Review/>
     <Footer/>
     </>
   )

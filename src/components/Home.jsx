@@ -1,5 +1,7 @@
-import React from 'react'
-import heroImage from '/src/assets/images/hero3.jpg'
+import React from "react";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import heroImage from "/src/assets/images/hero3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import Winery from "/src/assets/images/Winery.png";
@@ -11,22 +13,41 @@ import Sport from "/src/assets/images/Sport.png";
 
 function Home() {
   return (
-    <div className='min-h-screen'>
-        {/* <div>
-        <img src={heroImage} alt="Casa ripa hero image"/>
-        </div> */}
-        <div className="hero min-h-screen" style={{backgroundImage: 'url(/src/assets/images/hero3.jpg)'}}>
+
+    <div className="min-h-full">
+       <Carousel
+      showArrows={true}
+      infiniteLoop={true}
+      autoPlay={true}
+      interval={5000}
+      showThumbs={false}
+    >
+      <div className="min-h-full">
+        <img src={Nature} alt="Image 1" />
+      </div>
+      <div className="min-h-full">
+        <img src={Sport} alt="Image 2" />
+      </div>
+      <div className="min-h-full">
+        <img src={Beach} alt="Image 3" />
+      </div>
+      {/* Add more images as needed */}
+    </Carousel>
+      {/* <div
+        className="hero min-h-screen"
+        style={{ backgroundImage: "url(/src/assets/images/hero3.jpg)" }}
+      >
         <div className="hero-overlay bg-opacity-0"></div>
         <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-md">
-      {/* <h1 className="mb-5 text-5xl font-bold">Hello there</h1> */}
-      {/* <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p> */}
-      {/* <button className="btn btn-primary">BOOK NOW</button> */}
-    </div>
-  </div>
-</div>
+          <div className="max-w-md">
+            {/* <h1 className="mb-5 text-5xl font-bold">Hello there</h1> */}
+            {/* <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p> */}
+            {/* <button className="btn btn-primary">BOOK NOW</button> */}
+          {/* </div>
+        </div>
+      // </div> */} 
 
-<div>
+      <div>
         <h2 className="m-4 font-bold">Welcome to Casa Ripa</h2>
         <h4 className="font-custom text-justify m-2">
           Holiday Home @ Cupramontana, Le Marche, Italy
@@ -36,7 +57,7 @@ function Home() {
           farmhouse sits just below the Hilltop of Cupramontana. From here you
           can relax and take in the breathtaking and panoramic views over the
           surrounding countryside.
-          <button className="btn border border-gray-500 rounded sm:btn-sm md:btn-md lg:btn-lg">
+          <button className="btn border border-gray-500 rounded sm:btn-sm">
             More
             <FontAwesomeIcon icon={faCaretRight} />
           </button>
@@ -45,7 +66,7 @@ function Home() {
           We hope to welcome you to this paradise!
         </p>
         <h2 className="m-4 font-bold">ENJOY OUR PARADISE</h2>
-        <div className="flex justify-between flex-col lg:flex-row">
+        <div className="flex justify-evenly flex-col lg:flex-row">
           <div>
             <img
               src={Winery}
@@ -57,7 +78,7 @@ function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               porttitor accumsan tincidunt. Proin sagittis nisl in tortor
               hendrerit tincidunt.
-              <button className="btn border border-gray-500 rounded sm:btn-sm md:btn-md lg:btn-lg">
+              <button className="btn border border-gray-500 rounded sm:btn-sm">
                 More
                 <FontAwesomeIcon icon={faCaretRight} />
               </button>
@@ -73,7 +94,7 @@ function Home() {
             <p className="font-custom w-72 text-justify p-4">
               The Adriatic coast is about 35km away and there are several
               beaches with umbrellas and sunbeds.
-              <button className="btn border border-gray-500 rounded sm:btn-sm md:btn-md lg:btn-lg">
+              <button className="btn border border-gray-500 rounded sm:btn-sm">
                 More
                 <FontAwesomeIcon icon={faCaretRight} />
               </button>
@@ -89,14 +110,14 @@ function Home() {
             <p className="font-custom w-72 text-justify p-4">
               Discover the range of sports available to help you relax and keep
               fit around CASA RIPA
-              <button className="btn border border-gray-500 rounded sm:btn-sm md:btn-md lg:btn-lg">
+              <button className="btn border border-gray-500 rounded sm:btn-sm">
                 More
                 <FontAwesomeIcon icon={faCaretRight} />
               </button>
             </p>
           </div>
-          </div>
-        <div className="flex justify-between flex-col lg:flex-row">
+        </div>
+        <div className="flex justify-evenly flex-col lg:flex-row">
           <div>
             <img
               src={Santuranio}
@@ -110,7 +131,7 @@ function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               porttitor accumsan tincidunt. Proin sagittis nisl in tortor
               hendrerit tincidunt.
-              <button className="btn border border-gray-500 rounded sm:btn-sm md:btn-md lg:btn-lg">
+              <button className="btn border border-gray-500 rounded sm:btn-sm">
                 More
                 <FontAwesomeIcon icon={faCaretRight} />
               </button>
@@ -127,7 +148,7 @@ function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               porttitor accumsan tincidunt. Proin sagittis nisl in tortor
               hendrerit tincidunt.
-              <button className="btn border border-gray-500 rounded sm:btn-sm md:btn-md lg:btn-lg">
+              <button className="btn border border-gray-500 rounded sm:btn-sm">
                 More
                 <FontAwesomeIcon icon={faCaretRight} />
               </button>
@@ -144,7 +165,7 @@ function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               porttitor accumsan tincidunt. Proin sagittis nisl in tortor
               hendrerit tincidunt.
-              <button className="btn border border-gray-500 rounded sm:btn-sm md:btn-md lg:btn-lg">
+              <button className="btn border border-gray-500 rounded sm:btn-sm">
                 More
                 <FontAwesomeIcon icon={faCaretRight} />
               </button>
@@ -153,10 +174,7 @@ function Home() {
         </div>
       </div>
     </div>
-
-    
-    
-  )
+  );
 }
 
-export default Home
+export default Home;
