@@ -47,25 +47,25 @@ function Home() {
         </div>
       // </div> */} 
 
-      <div>
-        <h2 className="m-4 font-bold">Welcome to Casa Ripa</h2>
-        <h4 className="font-custom text-justify m-2">
+      <div className="sm:width-full lg:m-7 ">
+        <h2 className="m-4 font-bold text-3xl">Welcome to Casa Ripa</h2>
+        <h4 className="font-custom text-justify m-4">
           Holiday Home @ Cupramontana, Le Marche, Italy
         </h4>
-        <p className="font-custom text-justify p-4">
+        <p className="font-custom text-justify m-4">
           In the heart of Le Marche region our recently renovated and restored
           farmhouse sits just below the Hilltop of Cupramontana. From here you
           can relax and take in the breathtaking and panoramic views over the
-          surrounding countryside.
-          <button className="btn border border-gray-500 rounded sm:btn-sm">
-            More
+          surrounding countryside. <br/>
+         
+            <b>More</b>
             <FontAwesomeIcon icon={faCaretRight} />
-          </button>
+          
         </p>
-        <p className="font-custom text-justify m-2">
+        <p className="font-custom text-justify m-4">
           We hope to welcome you to this paradise!
         </p>
-        <h2 className="m-4 font-bold">ENJOY OUR PARADISE</h2>
+        <h2 className="m-4 font-bold text-lg">ENJOY OUR PARADISE</h2>
         <div className="flex justify-evenly flex-col lg:flex-row">
           <div>
             <img
@@ -78,10 +78,11 @@ function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               porttitor accumsan tincidunt. Proin sagittis nisl in tortor
               hendrerit tincidunt.
-              <button className="btn border border-gray-500 rounded sm:btn-sm">
-                More
+              <br/>
+         
+         <b>More</b>
                 <FontAwesomeIcon icon={faCaretRight} />
-              </button>
+              
             </p>
           </div>
           <div>
@@ -94,10 +95,11 @@ function Home() {
             <p className="font-custom w-72 text-justify p-4">
               The Adriatic coast is about 35km away and there are several
               beaches with umbrellas and sunbeds.
-              <button className="btn border border-gray-500 rounded sm:btn-sm">
-                More
+              <br/>
+         
+         <b>More</b>
                 <FontAwesomeIcon icon={faCaretRight} />
-              </button>
+             
             </p>
           </div>
           <div>
@@ -110,10 +112,11 @@ function Home() {
             <p className="font-custom w-72 text-justify p-4">
               Discover the range of sports available to help you relax and keep
               fit around CASA RIPA
-              <button className="btn border border-gray-500 rounded sm:btn-sm">
-                More
+              <br/>
+         
+         <b>More</b>
                 <FontAwesomeIcon icon={faCaretRight} />
-              </button>
+             
             </p>
           </div>
         </div>
@@ -131,10 +134,11 @@ function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               porttitor accumsan tincidunt. Proin sagittis nisl in tortor
               hendrerit tincidunt.
-              <button className="btn border border-gray-500 rounded sm:btn-sm">
-                More
+              <br/>
+         
+         <b>More</b>
                 <FontAwesomeIcon icon={faCaretRight} />
-              </button>
+             
             </p>
           </div>
           <div>
@@ -148,10 +152,11 @@ function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               porttitor accumsan tincidunt. Proin sagittis nisl in tortor
               hendrerit tincidunt.
-              <button className="btn border border-gray-500 rounded sm:btn-sm">
-                More
+              <br/>
+         
+         <b>More</b>
                 <FontAwesomeIcon icon={faCaretRight} />
-              </button>
+             
             </p>
           </div>
           <div>
@@ -165,10 +170,11 @@ function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               porttitor accumsan tincidunt. Proin sagittis nisl in tortor
               hendrerit tincidunt.
-              <button className="btn border border-gray-500 rounded sm:btn-sm">
-                More
+              <br/>
+         
+         <b>More</b>
                 <FontAwesomeIcon icon={faCaretRight} />
-              </button>
+             
             </p>
           </div>
         </div>
