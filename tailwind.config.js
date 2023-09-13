@@ -6,7 +6,12 @@ export default {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        
+        'body': ['Aref Ruqaa Ink'],
+      }
+    },
   },
   plugins: [require("daisyui")],
 }
