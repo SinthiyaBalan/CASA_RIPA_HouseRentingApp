@@ -1,9 +1,8 @@
 import React from "react";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import heroImage from "/src/assets/images/hero3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import {  faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import Winery from "/src/assets/images/Winery.png";
 import Beach from "/src/assets/images/Beach.png";
 import Nature from "/src/assets/images/Nature.png";
@@ -14,39 +13,26 @@ import Sport from "/src/assets/images/Sport.png";
 function Home() {
   return (
 
-    <div className="min-h-full">
+    <div>
        <Carousel
       showArrows={true}
       infiniteLoop={true}
       autoPlay={true}
       interval={5000}
       showThumbs={false}
+      style={{ height: '400px' }} 
     >
-      <div className="min-h-full">
-        <img src={Nature} alt="Image 1" />
+      <div>
+        <img src={Nature} alt="Image 1" style={{ height: '100%' }}   />
       </div>
       <div className="min-h-full">
-        <img src={Sport} alt="Image 2" />
+        <img src={Sport} alt="Image 2" style={{ height: '100%' }}  />
       </div>
       <div className="min-h-full">
-        <img src={Beach} alt="Image 3" />
+        <img src={Beach} alt="Image 3"  style={{ height: '100%' }}  />
       </div>
       {/* Add more images as needed */}
     </Carousel>
-      {/* <div
-        className="hero min-h-screen"
-        style={{ backgroundImage: "url(/src/assets/images/hero3.jpg)" }}
-      >
-        <div className="hero-overlay bg-opacity-0"></div>
-        <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            {/* <h1 className="mb-5 text-5xl font-bold">Hello there</h1> */}
-            {/* <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p> */}
-            {/* <button className="btn btn-primary">BOOK NOW</button> */}
-          {/* </div>
-        </div>
-      // </div> */} 
-
       <div>
         <h2 className="m-4 font-bold">Welcome to Casa Ripa</h2>
         <h4 className="font-custom text-justify m-2">
