@@ -12,6 +12,7 @@ function ExploreSurroundings() {
   return (
     <>
     <div className='min-h-full'>
+        
         <h2 className="m-4 font-bold text-lg">ENJOY OUR PARADISE</h2>
         <div className="flex justify-evenly flex-col lg:flex-row">
           <div>
@@ -27,7 +28,7 @@ function ExploreSurroundings() {
               hendrerit tincidunt.
               <br/>
          
-         <b>More</b>
+           <b>More</b>
                 <FontAwesomeIcon icon={faCaretRight} />
               
             </p>
