@@ -40,6 +40,7 @@ function Nav() {
         </details>
       </li>
       <li><a>CONTACT</a></li>
+      
       <li><a>ACTIVITIES TO DO</a></li>
     </ul>
   </div>
