@@ -5,7 +5,7 @@ function FAQ( {faqData}) {
 
     const styles = {
         // bgColor: 'white',
-        titleTextColor: "blue",
+        titleTextColor: "black",
         rowTitleColor: "blue",
         rowContentColor: 'black',
         arrowColor: "green",

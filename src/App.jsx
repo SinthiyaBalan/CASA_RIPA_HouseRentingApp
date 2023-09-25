@@ -3,6 +3,9 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import Review from './components/Review'
+import FAQ from './components/FAQ'
+
+import faqData from './data/faq.json'
 
 function App() {
   
@@ -11,6 +14,7 @@ function App() {
     <Nav/>
     <Home/>
     <Review/>
+    <FAQ faqData = {faqData}/>
     <Footer/>
     </>
   )
