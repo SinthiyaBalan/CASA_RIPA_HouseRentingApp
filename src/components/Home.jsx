@@ -9,6 +9,9 @@ import Nature from "/src/assets/images/Nature.png";
 import Restaurant from "/src/assets/images/Restaurant.png";
 import Santuranio from "/src/assets/images/Santuranio.png";
 import Sport from "/src/assets/images/Sport.png";
+import Review from "./Review";
+import { Link } from 'react-router-dom';
+import ExploreSurroundings from "./ExploreSurroundings";
 
 function Home() {
   return (
@@ -17,7 +20,7 @@ function Home() {
        <Carousel
       showArrows={true}
       infiniteLoop={true}
-      autoPlay={true}
+      autoPlay={false}
       interval={5000}
       showThumbs={false}
       style={{ height: '400px' }} 
@@ -65,15 +68,17 @@ function Home() {
         <p className="font-custom text-justify m-4">
           We hope to welcome you to this paradise!
         </p>
+        
         <h2 className="m-4 font-bold text-lg">ENJOY OUR PARADISE</h2>
         <div className="flex justify-evenly flex-col lg:flex-row">
           <div>
+          <Link to="/ExploreSurroundings">
             <img
               src={Winery}
               alt="Casa ripa winery image"
               className="w-72 m-4 rounded-lg shadow-lg mb-4"
-            />
-            <h2 className="m-4 text-lg font-bold">Winery</h2>
+            /> </Link>
+            <h2 className="m-4 text-lg font-bold">Winery</h2> 
             <p className="font-custom w-72 text-justify p-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               porttitor accumsan tincidunt. Proin sagittis nisl in tortor
@@ -176,11 +181,13 @@ function Home() {
                 <FontAwesomeIcon icon={faCaretRight} />
              
             </p>
+         
           </div>
         </div>
       </div>
+      <Review/>
     </div>
+
   );
 }
-
 export default Home;

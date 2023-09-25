@@ -4,17 +4,20 @@ import Footer from './components/Footer'
 import Home from './components/Home'
 import Review from './components/Review'
 import FAQ from './components/FAQ'
-
 import faqData from './data/faq.json'
+import { Routes, Route, Link } from "react-router-dom";
+import ExploreSurroundings from './components/ExploreSurroundings'
 
 function App() {
   
   return (
     <>
     <Nav/>
-    <Home/>
-    <Review/>
-    <FAQ faqData = {faqData}/>
+    <Routes>
+    <Route path="/" element={<Home/> } />
+    <Route path="/ExploreSurroundings" element={<ExploreSurroundings/>} />
+    </Routes>
+    {/* <Review/> */}
     <Footer/>
     </>
   )
