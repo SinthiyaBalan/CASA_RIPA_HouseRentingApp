@@ -21,7 +21,7 @@ function ExploreSurroundings() {
         {resultString}
         <span
           onClick={toggleIsTruncated}
-          className="btn btn-outline btn-info btn-xs"
+          className="btn  btn-info btn-xs"
         >
           {isTruncated ? "Read More" : "Read Less"}
         </span>
@@ -32,8 +32,8 @@ function ExploreSurroundings() {
     <>
       <div className="min-h-full">
         <h2 className="m-4 font-bold text-lg">ENJOY OUR PARADISE</h2>
-        <div className="flex justify-evenly flex-col lg:flex-row">
-          <div>
+        <div className="flex justify-evenly flex-col ">
+          <div className="flex justify-evenly">
             <img
               src={Winery}
               alt="Casa ripa winery image"
