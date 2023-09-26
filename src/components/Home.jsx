@@ -9,6 +9,7 @@ import Nature from "/src/assets/images/Nature.png";
 import Restaurant from "/src/assets/images/Restaurant.png";
 import Santuranio from "/src/assets/images/Santuranio.png";
 import Sport from "/src/assets/images/Sport.png";
+import Contact from "./Contact";
 
 
 function Home() {
@@ -180,7 +181,12 @@ function Home() {
           </div>
         </div>
       </div>
+        <Contact/>
+
     </div>
+
+
+
   );
 }
 
