@@ -4,6 +4,7 @@ import CIcon from "@coreui/icons-react";
 import * as icon from "@coreui/icons";
 import { Link } from 'react-router-dom';
 import ExploreSurroundings from "./ExploreSurroundings";
+import Contact from "./Contact";
 
 function Nav() {
   return (
@@ -54,6 +55,20 @@ function Nav() {
             <Link to="/FAQ">FAQ</Link>
             </li>
           </ul>
+
+        </details>
+      </li>
+      <li><Link to="/Contact">CONTACT</Link></li>
+      
+      <li><a>ACTIVITIES TO DO</a></li>
+    </ul>
+  </div>
+  <div className="navbar-end gap-4">
+    <a className="btn bg-green-500 hover:bg-green-600">Book now</a>
+    <div className="h-8 w-8 m-2">
+    <CIcon icon={icon.cilTranslate} size="sm"/>
+    {/* <ul className="menu menu-horizontal px-1">
+
         </div>
      
         <img src={logo} alt="Casa ripa logo" />
@@ -77,7 +92,7 @@ function Nav() {
             </details>
           </li>
           <li>
-            <a>CONTACT</a>
+           <Link to="/Contact">CONTACT</Link>
           </li>
           <li>
           <Link to="/ExploreSurroundings">ACTIVITIES TO DO</Link>
@@ -92,6 +107,7 @@ function Nav() {
         <div className="h-8 w-8 m-2">
           <CIcon icon={icon.cilTranslate} size="sm" />
           {/* <ul className="menu menu-horizontal px-1">
+
       <li tabIndex={0}>
         
           <CIcon icon={icon.cilTranslate} size="xs"/>

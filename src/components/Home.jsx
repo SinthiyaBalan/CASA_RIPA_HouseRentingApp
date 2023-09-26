@@ -9,9 +9,14 @@ import Nature from "/src/assets/images/Nature.png";
 import Restaurant from "/src/assets/images/Restaurant.png";
 import Santuranio from "/src/assets/images/Santuranio.png";
 import Sport from "/src/assets/images/Sport.png";
+
+import Contact from "./Contact";
+
+
 import Review from "./Review";
 import { Link } from "react-router-dom";
 import ExploreSurroundings from "./ExploreSurroundings";
+
 
 function Home() {
   const top = () => {
@@ -188,12 +193,19 @@ function Home() {
           </div>
         </div>
       </div>
+
+
+
       <Review />
 
       <button onClick={top} className="btn btn-sm m-2 btn-neutral">
         Top
       </button>
+
     </div>
+
+
+
   );
 }
 export default Home;
