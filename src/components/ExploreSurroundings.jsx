@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import Winery from "/src/assets/images/Winery.png";
@@ -29,8 +29,8 @@ function ExploreSurroundings() {
     <>
       <div className="min-h-full">
         <h2 className="m-4 font-bold text-center text-lg">ENJOY OUR PARADISE</h2>
-        <div className="card m-4 lg:card-side bg-base-100 shadow-xl">
-          <figure>
+        <div className="card m-4 lg:card-side bg-base-100 shadow-xl" id="1">
+          <figure id="1">
             <img src={Winery} alt="Winery" />
           </figure>
           <div className="card-body">
@@ -88,7 +88,7 @@ function ExploreSurroundings() {
 <div className="card m-4 lg:card-side bg-base-100 shadow-xl">
   <figure><img src={Santuranio} alt="Santuranio"/></figure>
   <div className="card-body">
-    <h2 className="card-title">New album is released!</h2>
+    <h2 className="card-title">Santuranio</h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus cupiditate, veritatis deleniti ut ex libero recusandae minus. Consequuntur dolore illo itaque tempore vel. Perspiciatis rerum qui reiciendis quae, eos suscipit.</p>
     <div className="card-actions justify-end">
   
