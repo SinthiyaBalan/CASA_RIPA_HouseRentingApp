@@ -8,7 +8,7 @@ import ExploreSurroundings from "./ExploreSurroundings";
 function Nav() {
   return (
     <div className="navbar bg-base-100">
-      <div className="navbar-start">
+      <div className="navbar-start font-bold">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -28,7 +28,7 @@ function Nav() {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-bold"
           >
             <li>
               <Link to="/">HOME</Link>
@@ -50,13 +50,16 @@ function Nav() {
             <li>
             <Link to="/ExploreSurroundings">ACTIVITIES TO DO</Link>
             </li>
+            <li>
+            <Link to="/FAQ">FAQ</Link>
+            </li>
           </ul>
         </div>
-        {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
+     
         <img src={logo} alt="Casa ripa logo" />
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 font-bold">
           <li>
           <Link to="/">HOME</Link>
           </li>
@@ -78,6 +81,9 @@ function Nav() {
           </li>
           <li>
           <Link to="/ExploreSurroundings">ACTIVITIES TO DO</Link>
+            </li>
+            <li>
+          <Link to="/FAQ">FAQ</Link>
             </li>
         </ul>
       </div>

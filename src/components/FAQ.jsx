@@ -1,7 +1,7 @@
 import React , { useEffect, useState } from 'react';
 import Faq from "react-faq-component";
 
-function FAQ( {faqData}) {
+function FAQ({faqData}) {
 
     const styles = {
         // bgColor: 'white',
@@ -18,7 +18,7 @@ function FAQ( {faqData}) {
     };
     
   return (
-    <div>
+    <div className="m-8">
     <Faq
         data={faqData}
         styles={styles}

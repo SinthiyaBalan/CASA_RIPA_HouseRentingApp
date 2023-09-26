@@ -1,7 +1,7 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react';
 import * as icon from '@coreui/icons';
-
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -10,9 +10,9 @@ function Footer() {
     <span className="footer-title">Find out more</span> 
     <a className="link link-hover">About CASA RIPA</a>
     <a className="link link-hover">Route to Us</a>
-    <a className="link link-hover">FAQ's</a>
+    <a className="link link-hover"><Link to="/FAQ">FAQ's</Link></a>
     <a className="link link-hover">Album</a>
-    <a className="link link-hover">Admin</a>
+    <a className="link link-hover"><Link to="/AdminLogin">Admin</Link></a>
   </div> 
   <div>
     <span className="footer-title">Contacts</span> 
