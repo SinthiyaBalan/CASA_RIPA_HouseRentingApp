@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,26 +14,26 @@ import { Link } from "react-router-dom";
 import ExploreSurroundings from "./ExploreSurroundings";
 
 function Home() {
-  function ReadMore({children, maxCharacterCount = 100}){
+  const top = () => {
+    window.scrollTo(0, 0);
+  };
+  function ReadMore({ children, maxCharacterCount = 150 }) {
     const text = children;
-    const[isTruncated,setIsTruncated] = useState(true)
-    const resultString = isTruncated?text.slice(0,100): text
-    function toggleIsTruncated(){
-    setIsTruncated(!isTruncated);
+    const [isTruncated, setIsTruncated] = useState(true);
+    const resultString = isTruncated ? text.slice(0, 150) : text;
+    function toggleIsTruncated() {
+      setIsTruncated(!isTruncated);
     }
-    return(
-    
-    <p className="has-text-left">
-    {resultString}
-    <span onClick={toggleIsTruncated} className="tag-is-info is-small"> 
-    
-    {isTruncated? "Read More" : "Read Less"}
-    
-    </span>
-    </p>
+    return (
+      <p className="has-text-left">
+        {resultString}
+        <span onClick={toggleIsTruncated} className="btn m-4 btn-info btn-xs">
+          {isTruncated ? "Read More" : "Read Less"}
+        </span>
+      </p>
     );
-    }
-    
+  }
+
   return (
     <div>
       <Carousel
@@ -74,23 +74,19 @@ function Home() {
         <h4 className="font-custom text-justify m-2">
           Holiday Home @ Cupramontana, Le Marche, Italy
         </h4>
-      
+
         <p className="font-custom text-justify m-4">
-        <ReadMore className="bold">
-          In the heart of Le Marche region our recently renovated and restored
-          farmhouse sits just below the Hilltop of Cupramontana. From here you
-          can relax and take in the breathtaking and panoramic views over the
-          surrounding countryside.
-          We hope to welcome you to this paradise!
+          <ReadMore>
+            In the heart of Le Marche region our recently renovated and restored
+            farmhouse sits just below the Hilltop of Cupramontana. From here you
+            can relax and take in the breathtaking and panoramic views over the
+            surrounding countryside. We hope to welcome you to this paradise!
           </ReadMore>
-          </p>
-    
-       
+        </p>
 
         <h2 className="m-4 font-bold text-lg">ENJOY OUR PARADISE</h2>
         <div className="flex justify-evenly flex-col lg:flex-row">
           <div>
-            
             <Link to="/ExploreSurroundings">
               <img
                 src={Winery}
@@ -193,6 +189,10 @@ function Home() {
         </div>
       </div>
       <Review />
+
+      <button onClick={top} className="btn btn-sm m-2 btn-neutral">
+        Top
+      </button>
     </div>
   );
 }
