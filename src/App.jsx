@@ -1,3 +1,4 @@
+
 import './App.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
@@ -29,8 +30,9 @@ function App() {
     </Routes>
     {/* <Review/> */}
     <Footer/>
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
