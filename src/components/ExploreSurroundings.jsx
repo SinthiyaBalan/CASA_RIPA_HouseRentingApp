@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import Winery from "/src/assets/images/Winery.png";
@@ -19,10 +19,7 @@ function ExploreSurroundings() {
     return (
       <p className="has-text-left">
         {resultString}
-        <span
-          onClick={toggleIsTruncated}
-          className="btn  btn-info btn-xs"
-        >
+        <span onClick={toggleIsTruncated} className="btn  btn-info btn-xs">
           {isTruncated ? "Read More" : "Read Less"}
         </span>
       </p>
@@ -31,126 +28,84 @@ function ExploreSurroundings() {
   return (
     <>
       <div className="min-h-full">
-        <h2 className="m-4 font-bold text-lg">ENJOY OUR PARADISE</h2>
-        <div className="flex justify-evenly flex-col ">
-          <div className="flex justify-evenly">
-            <img
-              src={Winery}
-              alt="Casa ripa winery image"
-              className="w-72 m-4 rounded-lg shadow-lg mb-4"
-            />
-            <h2 className="m-4 text-lg font-bold">Winery</h2>
-            <p className="font-custom w-72 text-justify p-4">
-              <ReadMore>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                porttitor accumsan tincidunt. Proin sagittis nisl in tortor
-                hendrerit tincidunt. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Nulla porttitor accumsan tincidunt. Proin
-                sagittis nisl in tortor hendrerit tincidunt.
-              </ReadMore>
+        <h2 className="m-4 font-bold text-center text-lg">ENJOY OUR PARADISE</h2>
+        <div className="card m-4 lg:card-side bg-base-100 shadow-xl" id="1">
+          <figure id="1">
+            <img src={Winery} alt="Winery" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Winery</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum qui
+              quasi quisquam ratione neque quae in possimus asperiores
+              blanditiis assumenda eveniet necessitatibus vero debitis, maxime,
+              tenetur nesciunt dolor molestiae at?
             </p>
-          </div>
-          <div>
-            <img
-              src={Beach}
-              alt="Casa ripa beach image"
-              className="w-72 m-4 rounded-lg shadow-lg mb-4"
-            />
-            <h2 className="m-4 text-lg font-bold">Beach</h2>
-            <p className="font-custom w-72 text-justify p-4">
-              <ReadMore>
-                The Adriatic coast is about 35km away and there are several
-                beaches with umbrellas and sunbeds. The Adriatic coast is about
-                35km away and there are several beaches with umbrellas and
-                sunbeds. The Adriatic coast is about 35km away and there are
-                several beaches with umbrellas and sunbeds.
-              </ReadMore>
-
-              {/* <FontAwesomeIcon icon={faCaretRight} /> */}
-            </p>
-          </div>
-          <div>
-            <img
-              src={Sport}
-              alt="Casa ripa sport image"
-              className="w-72 m-4 rounded-lg shadow-lg mb-4"
-            />
-            <h2 className="m-4 text-lg font-bold">Sport and Activities</h2>
-
-            <p className="font-custom w-72 text-justify p-4">
-              <ReadMore>
-                Discover the range of sports available to help you relax and
-                keep fit around CASA RIPA Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Soluta repellat fugiat, harum
-                tempore nisi perspiciatis similique. Libero ex id quisquam,
-                suscipit, consequatur dolor cum quis voluptas odit incidunt
-                fugit ipsum.
-              </ReadMore>
-            </p>
+            <div className="card-actions justify-end"></div>
           </div>
         </div>
-        <div className="flex justify-evenly flex-col lg:flex-row">
-          <div>
-            <img
-              src={Santuranio}
-              alt="Casa ripa santuranio image"
-              className="w-72 m-4 rounded-lg shadow-lg mb-4"
-            />
-            <h2 className="m-4 text-lg font-bold">
-              Santuario Madonna di Frasassi
-            </h2>
-            <p className="font-custom w-72 text-justify p-4">
-              <ReadMore>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                porttitor accumsan tincidunt. Proin sagittis nisl in tortor
-                hendrerit tincidunt. Lorem ipsum dolor sit, amet consectetur
-                adipisicing elit. Quia, neque praesentium dolore quibusdam
-                voluptatibus molestiae voluptas rerum quasi alias enim odio
-                voluptatum cumque sint vero ipsam nesciunt ullam unde
-                recusandae.
-              </ReadMore>
+        <div className="card m-4 lg:card-side bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Beach</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum qui
+              quasi quisquam ratione neque quae in possimus asperiores
+              blanditiis assumenda eveniet necessitatibus vero debitis, maxime,
+              tenetur nesciunt dolor molestiae at?
             </p>
+            <div className="card-actions justify-end"></div>
           </div>
-          <div>
-            <img
-              src={Nature}
-              alt="Casa ripa nature image"
-              className="w-72 m-4 rounded-lg shadow-lg mb-4"
-            />
-            <h2 className="m-4 text-lg font-bold">Near by Cupramontana</h2>
-            <p className="font-custom w-72 text-justify p-4">
-              <ReadMore>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                porttitor accumsan tincidunt. Proin sagittis nisl in tortor
-                hendrerit tincidunt. Lorem ipsum, dolor sit amet consectetur
-                adipisicing elit. Sint, nihil fugiat doloremque obcaecati,
-                voluptas cum repudiandae laborum consequatur ullam adipisci sunt
-                vel corrupti ex suscipit ratione, repellendus dolores sapiente
-                numquam.
-              </ReadMore>
-            </p>
-          </div>
-          <div>
-            <img
-              src={Restaurant}
-              alt="Casa ripa restaurant image"
-              className="w-72 m-4 rounded-lg shadow-lg mb-4"
-            />
-            <h2 className="m-4 text-lg font-bold">Restaurants and Shops</h2>
-            <p className="font-custom w-72 text-justify p-4">
-              <ReadMore>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                porttitor accumsan tincidunt. Proin sagittis nisl in tortor
-                hendrerit tincidunt. Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Dolores at maiores ipsa amet. Blanditiis eum
-                quos tempora velit distinctio voluptatibus officiis
-                reprehenderit sunt commodi, natus alias delectus provident quis
-                explicabo?
-              </ReadMore>
-            </p>
-          </div>
+          <figure>
+            <img src={Beach} alt="Beach" />
+          </figure>
         </div>
       </div>
+      <div className="card m-4 lg:card-side bg-base-100 shadow-xl">
+        <figure>
+          <img src={Sport} alt="Sport" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">Sport</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse fuga
+            a architecto aliquam? In ratione consequatur sapiente molestiae,
+            expedita cum, libero recusandae vitae et temporibus, nam aperiam
+            quaerat repudiandae iure?
+          </p>
+          <div className="card-actions justify-end"></div>
+        </div>
+      </div>
+      <div className="card m-4 lg:card-side bg-base-100 shadow-xl">
+
+  <div className="card-body">
+    <h2 className="card-title">Nature</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit aperiam fuga illo esse ea iusto nobis. Officia nostrum illum voluptatum ducimus laudantium libero reprehenderit esse possimus atque, assumenda, soluta repellat.</p>
+    <div className="card-actions justify-end">
+    </div>
+  </div>
+  <figure><img src={Nature} alt="Nature"/></figure>
+</div>
+<div className="card m-4 lg:card-side bg-base-100 shadow-xl">
+  <figure><img src={Santuranio} alt="Santuranio"/></figure>
+  <div className="card-body">
+    <h2 className="card-title">Santuranio</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus cupiditate, veritatis deleniti ut ex libero recusandae minus. Consequuntur dolore illo itaque tempore vel. Perspiciatis rerum qui reiciendis quae, eos suscipit.</p>
+    <div className="card-actions justify-end">
+  
+    </div>
+  </div>
+</div>
+<div className="card m-4 lg:card-side bg-base-100 shadow-xl">
+
+  <div className="card-body">
+    <h2 className="card-title">Restaurant</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ipsa temporibus placeat eius ratione omnis commodi eaque quae illum itaque, neque reiciendis ducimus ipsam sed perferendis. Obcaecati magnam rerum neque.</p>
+    <div className="card-actions justify-end">
+  
+    </div>
+  </div>
+  <figure><img src={Restaurant} alt="Restaurant"/></figure>
+</div>
     </>
   );
 }
