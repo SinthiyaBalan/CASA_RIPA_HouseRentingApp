@@ -2,6 +2,8 @@ import express from "express";
 
 const app = express();
 
+import dbConfig from './db.js'
+
 const port = process.env.PORT || 3000
 
 app.listen(port,()=>console.log(`Server started using nodemon`));
