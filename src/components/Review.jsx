@@ -1,19 +1,64 @@
-import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import React , { useState } from 'react'
+import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
+import people from '../data/review.json';
+import './ReviewSlider.css';
 
 function Review() {
-  return (
-    <div>
-<div>
-<a href="#" className="block w-3/4 ml-5 mb-10 mt-10 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 text-center lg:w-2/4 lg:ml-72 lg:mb-10 lg:mt-10">
-    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white tracking-wide">GUEST REVIEW</h5>
-    <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/>
-    <p className="font-normal text-gray-700 dark:text-gray-400">“ We LOVED CASA RIPA! Thank you for the great accommodation, it exceeded all our expectations! The service has been very professional and they have answered all requests quickly and thoroughly. So I would recommend you to everyone."</p>
-</a>
 
-    </div>
-    </div>
+  const [index, setIndex] = useState(0);
+  console.log(people.reviews[0]);
+  const {name, job, text} = people.reviews[index];
+
+  const checkNumber = (number) => {
+    if(number > people.reviews.length - 1){
+      return 0;
+    }
+    else if(number < 0){
+      return people.reviews.length - 1;
+    }
+    return number;
+  }
+
+  const nextPerson = () => {
+    setIndex((index) => {
+      let newIndex = index + 1;
+      return checkNumber(newIndex);
+    }) 
+  };
+
+  const prevPerson = () => {
+    setIndex((index) => {
+      let newIndex = index - 1;
+      return checkNumber(newIndex);
+    }) 
+  }
+
+  
+  return (
+    <>
+    <h2 className='review-title'>GUEST REVIEW</h2>
+    <article className="review">
+    <div className="img-container">
+      {/* <img src={image} alt={name} className="person-img"/> */}
+      <span className="quote-icon">
+        <FaQuoteRight />
+      </span>
+      </div>
+      
+      {/* <p className="jon">{job}</p> */}
+      <p className="info">{text}</p>
+      <h4 className="author">{name}</h4>
+      <div className="button-container">
+        <button className="prev-btn" onClick={prevPerson}>
+          <FaChevronLeft />
+        </button>
+        <button className="next-btn" onClick={nextPerson}>
+          <FaChevronRight />
+        </button>  
+      </div>
+      
+  </article>
+  </>
   )
 }
 
