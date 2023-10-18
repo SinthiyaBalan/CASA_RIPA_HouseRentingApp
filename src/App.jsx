@@ -3,7 +3,6 @@ import './App.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './components/Home'
-import Review from './components/Review'
 import FAQ from './components/FAQ'
 import faqData from './data/faq.json'
 import { Routes, Route, Link } from "react-router-dom";
@@ -13,6 +12,8 @@ import loginData from './data/loginDetails.json';
 import AdminHome from './components/AdminHome';
 import { useState } from "react";
 import Contact from './components/Contact'
+import Booking from './components/Booking'
+import Bookingscreen from './components/Bookingscreen'
 
 function App() {
 
@@ -27,10 +28,10 @@ function App() {
     <Route path="/Contact" element={<Contact/>} />
     <Route path="/FAQ" element={<FAQ faqData={faqData} />} />
     <Route path="/AdminLogin" element={<AdminLogin loginData={loginData} user = {user} setUser ={setUser}/>} />
-
+    <Route path='/Booking' element={<Booking/>} />
+    <Route path='/book/:roomid' element={<Bookingscreen/>} />
     <Route path='/AdminHome' element={<AdminHome user = {user} />} />
     </Routes>
-    {/* <Review/> */}
     <Footer/>
 
     </>
