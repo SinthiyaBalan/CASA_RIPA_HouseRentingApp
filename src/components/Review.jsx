@@ -35,9 +35,10 @@ function Review() {
 
   
   return (
-    <>
-    <h2 className='review-title'>GUEST REVIEW</h2>
+    <div className='review-container'>
+    
     <article className="review">
+    <h2 className='review-title'>GUEST REVIEW</h2>
     <div className="img-container">
       {/* <img src={image} alt={name} className="person-img"/> */}
       <span className="quote-icon">
@@ -58,7 +59,7 @@ function Review() {
       </div>
       
   </article>
-  </>
+  </div>
   )
 }
 
