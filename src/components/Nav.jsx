@@ -88,7 +88,9 @@ function Nav() {
         </ul>
       </div>
       <div className="navbar-end gap-4">
+      <Link to="/Booking">
         <a className="btn bg-green-500 hover:bg-green-600">Book now</a>
+        </Link>
         <div className="h-8 w-8 m-2">
           <CIcon icon={icon.cilTranslate} size="sm" />
           {/* <ul className="menu menu-horizontal px-1">
