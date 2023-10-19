@@ -1,0 +1,51 @@
+.contact{
+    height: 500px;
+    width: 500px;
+    /* background-color: azure; */
+    display: flex;
+    flex-direction: column;
+}
+.name{
+    height: 50px;
+    width: 250px;
+    border: 1px solid black ;
+    margin: 20px;
+    border-radius: 5px;
+}
+.name1{
+    height: 70px;
+    width: 280px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.send-btn{
+    margin-top: 30px;
+    height: 50px;
+    width: 200px;
+    font-size: larger;
+    font-weight: bolder;
+    color: darkgreen;
+    background-color: bisque;
+    border: 3px solid gray;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 60px;
+}
+.send-btn:hover{
+    color: blue;
+    font-size:x-large;
+    font-weight: bolder;
+    background-color: lightgray;
+}
+
+
+
+
+
+
+
+
+
+
+
