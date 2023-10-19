@@ -9,11 +9,10 @@ function Room({ room }) {
 
   return (
     <>
-   <div className="row">
+   <div className="row flex-justify-center">
     <div className="col-md-4">
-      <img src={room.imageurls[0]}/>
-     
-    </div>
+      <img src={room.imageurls[0]} style={{width : 500, height: 400, padding: 10}}/>
+    
     <div className="col-md-7">
       <h1>Name: {room.Name}</h1>
       <p>Description: {room.Description}</p>
@@ -26,6 +25,7 @@ function Room({ room }) {
         <Button className="btn btn-primary" onClick={handleShow}>
           View Details
         </Button>
+        </div>
         </div>
       </div>
       </div>
