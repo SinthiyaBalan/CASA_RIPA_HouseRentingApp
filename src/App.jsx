@@ -12,7 +12,8 @@ import AdminLogin from './components/AdminLogin';
 import loginData from './data/loginDetails.json';
 import AdminHome from './components/AdminHome';
 import { useState } from "react";
-import Contact from './components/Contact'
+import Contact from './components/Contact';
+
 
 function App() {
 

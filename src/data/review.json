@@ -1,17 +1,35 @@
-[
+{
+
+  "reviews":
+  [
     {
       "id": 1,
-      "text": "We LOVED CASA RIPA! Thank you for the great accommodation, it exceeded all our expectations! The service has been very professional and they have answered all requests quickly and thoroughly. So I would recommend you to everyone.",
-      "author": "Schwarz Müller , July 2023"
-    },
-    {
-      "id": 2,
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sequi saepe vero molestiae et pariatur, qui laboriosam eveniet eligendi sed.",
-      "author": "Lorem ipsum"
-    },
-    {
-      "id": 3,
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sequi saepe vero molestiae et pariatur, qui laboriosam eveniet eligendi sed.",
-      "author": "Lorem ipsum"
-    }
+        "name": "Schwarz Müller - July 2023",
+        "job": "web developer",
+        "image":
+        "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
+        "text":
+        "We LOVED CASA RIPA! Thank you for the great accommodation, it exceeded all our expectations! The service has been very professional and they have answered all requests quickly and thoroughly. So I would recommend you to everyone."
+      },
+      {
+        "id": 2,
+        "name": "Luka - August 2023",
+        "job": "web developer",
+        "image":
+          "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
+        "text":
+          "It was really very nice and had more than anything needed. Customer service via chat was also very prompt"
+      },
+      {
+        "id": 3,
+        "name": "Nadja - May 2023",
+        "job": "web developer",
+        "image":
+          "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
+        "text":
+          "Absolutely stunning location with far reaching views and the hosts are super friendly. The winery down the street has some of the most amazing wine and food we have ever had in Italy. A great base to explore the Italian countryside from. We absolutely will be back and 100% recommend booking!"
+      }
   ]
+}
+
+    
