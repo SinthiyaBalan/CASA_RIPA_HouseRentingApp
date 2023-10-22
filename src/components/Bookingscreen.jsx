@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Room from './Room'
+import Loader from "./Loader";
 
 function Bookingscreen() {
   const { roomid } = useParams();
@@ -31,7 +32,7 @@ function Bookingscreen() {
     <div>
         <h1>Room id = {roomid}</h1>
       {loading ? (
-        <h1>Loading...</h1>
+        <h1><Loader/></h1>
       ) : error ? (
         <div>Error loading room data.</div>
       ) : room ? (
