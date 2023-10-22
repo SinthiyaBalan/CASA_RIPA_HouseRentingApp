@@ -8,7 +8,7 @@ import Contact from "./Contact";
 
 function Nav() {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 sticky top-0 z-10">
       <div className="navbar-start font-bold">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -36,7 +36,7 @@ function Nav() {
             </li>
             <li>
               <a>ABOUT US</a>
-              <ul className="p-2">
+              <ul className="p-0">
                 <li>
                   <a>Route to Us</a>
                 </li>

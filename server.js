@@ -15,14 +15,5 @@ app.post('/api/rooms/getroombyid')
 const port = process.env.PORT || 8080
 app.listen(port,()=>console.log(`Server started on port ${port}`));
 
-// dbConfig.connect()
-//   .then(() => {
-//     app.listen(port, () => {
-//       console.log(`Server started on port ${port}`);
-//     });
-//   })
-//   .catch((err) => {
-//     console.error('Error connecting to the database:', err);
-//   });
 
 // mongodb+srv://Nithyadevi:<password>@cluster0.i4azy4a.mongodb.net/
