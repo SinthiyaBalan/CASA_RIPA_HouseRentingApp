@@ -9,15 +9,18 @@ function Room({ room }) {
 
   return (
     <>
-   <div className="row flex-justify-center">
-    <div className="col-md-4">
+    <div className="sm:flex-col md:flex-row">
+    <div >
       <img src={room.imageurls[0]} style={{width : 500, height: 400, padding: 10}}/>
-    
-    <div className="col-md-7">
+      </div>
+      
+    <div >
       <h1>Name: {room.Name}</h1>
       <p>Description: {room.Description}</p>
       <p>MaxCount: {room.MaxCount}</p>
       <p>Type: {room.Type}</p>
+      </div>
+     
       <div style={{ float: 'right' }}>
         <Link to={`/book/${room._id}`}>
           <Button className="btn btn-primary">Book Now</Button>
@@ -26,10 +29,6 @@ function Room({ room }) {
           View Details
         </Button>
         </div>
-        </div>
-      </div>
-      </div>
-
       {/* Modal to display room images */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -51,6 +50,7 @@ function Room({ room }) {
           </Button>
         </Modal.Footer>
       </Modal>
+      </div>
     </>
   );
 }

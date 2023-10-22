@@ -1,5 +1,6 @@
 import express from 'express';
-import roomModel from '../models/room.js';
+import roomModel from '../models/room.js'
+
 
 const router = express.Router();
 
@@ -12,10 +13,10 @@ router.get('/getallrooms', async(req,res)=>{
     }   
 })
 router.post('/getroombyid', async(req,res)=>{
-   
+    // const roomId = req.params.roomId;
+    const roomId = req.body.roomid
     try {
-        const roomid = req.body.roomid
-        const room = await roomModel.findOne({ _id: roomid });
+        const room = await roomModel.findById(roomId);
         res.status(200).json(room);
     } catch (error) {
         return res.status(500).json({message : error})
