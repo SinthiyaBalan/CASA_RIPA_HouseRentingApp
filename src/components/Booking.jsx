@@ -67,7 +67,7 @@ function Booking() {
                 </div>
               );
             })
-          ) : (
+          ) :  (
             <Error />
           )}
         </div>
