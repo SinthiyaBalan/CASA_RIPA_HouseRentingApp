@@ -31,7 +31,7 @@ function App() {
     <Route path="/FAQ" element={<FAQ faqData={faqData} />} />
     <Route path="/AdminLogin" element={<AdminLogin loginData={loginData} user = {user} setUser ={setUser}/>} />
     <Route path='/Booking' element={<Booking/>} />
-    <Route path='/book/:roomid' element={<Bookingscreen/>} />
+    <Route path='/book/:roomid/:fromdate/:todate' element={<Bookingscreen/>} />
     <Route path='/AdminHome' element={<AdminHome user = {user} />} />
     </Routes>
     <Footer/>
