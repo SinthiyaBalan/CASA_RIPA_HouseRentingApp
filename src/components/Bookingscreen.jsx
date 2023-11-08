@@ -13,11 +13,12 @@ function Bookingscreen() {
   const [room, setRoom] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const fromdateMoment = moment(fromdate, 'DD-MM-YYYY');
-const todateMoment = moment(todate, 'DD-MM-YYYY');
- 
-  const totaldays = moment.duration(todateMoment.diff(fromdateMoment)).asDays(); 
+  const fromdateMoment = moment(fromdate, "DD-MM-YYYY");
+  const todateMoment = moment(todate, "DD-MM-YYYY");
 
+  const totaldays =
+    moment.duration(todateMoment.diff(fromdateMoment)).asDays() + 1;
+  const [totalAmount, settotalAmount] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -28,6 +29,8 @@ const todateMoment = moment(todate, 'DD-MM-YYYY');
           { roomid: roomid.toString() }
         );
         setRoom(response.data);
+        const newtotalamount = totaldays * response.data.renterpay;
+        settotalAmount(newtotalamount);
         setLoading(false);
       } catch (error) {
         setError(true);
@@ -36,29 +39,57 @@ const todateMoment = moment(todate, 'DD-MM-YYYY');
       }
     };
     fetchData();
-  }, [roomid]);
+  }, [roomid, totaldays]);
 
+  async function bookRoom() {
+    const bookingDetails = {
+      roomid: room._id,
+      fromdate,
+      todate,
+      totalAmount,
+      totaldays,
+    };
+    try {
+      const result = await axios.post(
+        "http://localhost:8080/api/bookings/bookroom",
+        bookingDetails
+      );
+
+      if (result.data && result.data.success) {
+        // Handle a successful booking
+        console.log("Booking successful!");
+      } else {
+        // Handle a failed booking
+        console.error("Booking failed:", result.data.message);
+      }
+    } catch (error) {
+      console.error("An error occurred while booking:", error.message);
+    }
+  }
   return (
     <div>
-    <h1 className="text-center">Bookingscreen</h1>
+      <h1 className="text-center">Bookingscreen</h1>
       {loading ? (
         <Loader />
       ) : room ? (
         <>
-        <div className="flex">
-          {room.imageurls && room.imageurls.length > 0 && (
-            <img src={room.imageurls[0]} alt={room.Name} />
-          )}
-          <div className="m-14">
-          <h1>Name: {room.Name}</h1>
-          <h1>Room id = {roomid}</h1>
-          <p>From Date:{fromdate}</p>
-          <p>To Date:{todate}</p>
-          <p>Total days: {totaldays}</p>
-          <h1>Room id = {roomid}</h1>
-          <h1>Max Count = {room.MaxCount}</h1>
+          <div className="flex">
+            {room.imageurls && room.imageurls.length > 0 && (
+              <img src={room.imageurls[0]} alt={room.Name} />
+            )}
+            <div className="m-14">
+              <h1>Name: {room.Name}</h1>
+              {/* <h1>Room id = {roomid}</h1> */}
+              <p>From Date:{fromdate}</p>
+              <p>To Date:{todate}</p>
+              <p>Total days: {totaldays}</p>
+              <p>Max Count = {room.MaxCount}</p>
+              <p>Total amount = {totalAmount}</p>
+            </div>
           </div>
-          </div>
+          <button className="btn btn-primary float:right" onClick={bookRoom}>
+            Paynow
+          </button>
         </>
       ) : (
         <Error />
