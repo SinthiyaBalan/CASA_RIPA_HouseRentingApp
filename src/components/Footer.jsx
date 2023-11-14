@@ -11,7 +11,7 @@ function Footer() {
     <a className="link link-hover">About CASA RIPA</a>
     <a className="link link-hover">Route to Us</a>
     <a className="link link-hover"><Link to="/FAQ">FAQ's</Link></a>
-    <a className="link link-hover">Album</a>
+    <a className="link link-hover"><Link to="/GalleryImages">Gallery</Link></a>
     <a className="link link-hover"><Link to="/AdminLogin">Admin</Link></a>
   </div> 
   <div>

@@ -14,6 +14,7 @@ import { useState } from "react";
 import Contact from './components/Contact'
 import Booking from './components/Booking'
 import Bookingscreen from './components/Bookingscreen'
+import Gallery from './components/Gallery'
 
 
 
@@ -33,6 +34,7 @@ function App() {
     <Route path='/Booking' element={<Booking/>} />
     <Route path='/book/:roomid' element={<Bookingscreen/>} />
     <Route path='/AdminHome' element={<AdminHome user = {user} />} />
+    <Route path='/GalleryImages' element={<Gallery/>} />
     </Routes>
     <Footer/>
 
