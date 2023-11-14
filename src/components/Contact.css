@@ -9,7 +9,7 @@
 }
 
 .contact-container{
-    height: 90%;
+    height: 80%;
     display: flex;
     width: 80%;
     flex-direction: column;
@@ -26,19 +26,19 @@
     height: 50px;
     width: 250px;
     border: 1px solid black ;
-    margin: 2px;
     border-radius: 5px;
 }
 .message{
-    height: 70px;
+    height: 90px;
     width: 280px;
     border: 1px solid black;
     border-radius: 5px;
+
 }
 .send-btn{
-    margin-top: 10px;
-    height: 50px;
-    width: 150px;
+    margin-top: 5px;
+    height: 40px;
+    width: 110px;
     font-size: larger;
     font-weight: bolder;
     color: darkgreen;
@@ -46,7 +46,7 @@
     border: 3px solid gray;
     cursor: pointer;
     text-align: center;
-    margin-left: 30px;
+    margin-left: 40px;
     border-radius: 5%;
 }
 .send-btn:hover{

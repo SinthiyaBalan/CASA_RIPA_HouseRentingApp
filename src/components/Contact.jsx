@@ -25,7 +25,7 @@ function Contact() {
       <input type="text" className='name'  name="name" placeholder=' * Name'/><br />
       <input type="email" className='name' name="email"  placeholder=' * Email' /><br />
       <input type="number" className='name' name="number" placeholder=' * Phone Number' /><br />
-     <input type="text" className='message' name="query" placeholder=' * Write Your Query' /><br />
+     <textarea className='message' name="query" placeholder=' * Write Your Query' rows={4}/><br />
      <button type='submit' className='mt-0 text-lg font-bold send-btn'>Submit</button>
       </form>
       </div>
