@@ -1,27 +1,20 @@
-import React , { useRef } from 'react'
+import React from 'react'
 import './Contact.css'
+import emailjs from '@emailjs/browser';
 
 
 function Contact() {
-  const name =useRef(null);
-  const email =useRef(null);
-  const phone = useRef(null);
-  const message= useRef(null);
   
-  const handlesubmit = (e) =>{
+  const sentEmail = (e) =>{
     e.preventDefault();
-    consolelog({
-        Name : name.target.value,
-        Email : email.target.value,
-        Phone : phone.target.value,
-        Message : message.target.value
-      });
+    emailjs.sendForm()
+    
   };
   return (
     <div className='contact-wrapper'>
     <div className='contact-container'>
       <h2 className='mt-0 mb-5 text-lg font-bold'>Enquiries regarding your booking on CASA RIPA</h2>
-      <form className="form-wrapper" onSubmit={handlesubmit}  >
+      <form className="form-wrapper" onSubmit={sentEmail}  >
       <input type="text" className='name'  name="name" placeholder=' * Name'/><br />
       <input type="email" className='name' name="email"  placeholder=' * Email' /><br />
       <input type="number" className='name' name="number" placeholder=' * Phone Number' /><br />
