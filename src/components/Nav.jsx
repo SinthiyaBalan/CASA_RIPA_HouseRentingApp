@@ -41,7 +41,7 @@ function Nav() {
                   <a>Route to Us</a>
                 </li>
                 <li>
-                  <a>Gallery</a>
+                <Link to="/GalleryImages">Gallery</Link>
                 </li>
               </ul>
             </li>
@@ -71,7 +71,7 @@ function Nav() {
                   <a>Route to Us</a>
                 </li>
                 <li>
-                  <a>Gallery</a>
+                <Link to="/GalleryImages">Gallery</Link>
                 </li>
               </ul>
             </details>

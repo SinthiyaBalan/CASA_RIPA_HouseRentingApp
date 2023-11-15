@@ -1,36 +1,28 @@
-import React , { useRef } from 'react'
+import React from 'react'
 import './Contact.css'
+import emailjs from '@emailjs/browser';
 
 
 function Contact() {
-  const name =useRef(null);
-  const email =useRef(null);
-  const phone = useRef(null);
-  const message= useRef(null);
   
-  const handlesubmit = (e) =>{
+  const sentEmail = (e) =>{
     e.preventDefault();
-    consolelog({
-        Name : name.target.value,
-        Email : email.target.value,
-        Phone : phone.target.value,
-        Message : message.target.value
-      });
+    emailjs.sendForm()
+    
   };
   return (
-    <div className='contact'>
-      <h3>Please fill the form  to know more</h3>
-      <form action="" onSubmit={handlesubmit}  >
-      <input type="text" className='name'  name="name" placeholder=' * Name'/>
-      <input type="email" className='name' name="email"  placeholder=' * Email' />
-      <input type="number" className='name' name="number" placeholder=' * Phone Number' />
-     <input type="text" className='name1' name="query" placeholder=' * Write Your Query' />
+    <div className='contact-wrapper'>
+    <div className='contact-container'>
+      <h2 className='mt-0 mb-5 text-lg font-bold'>Enquiries regarding your booking on CASA RIPA</h2>
+      <form className="form-wrapper" onSubmit={sentEmail}  >
+      <input type="text" className='name'  name="name" placeholder=' * Name'/><br />
+      <input type="email" className='name' name="email"  placeholder=' * Email' /><br />
+      <input type="number" className='name' name="number" placeholder=' * Phone Number' /><br />
+     <textarea className='message' name="query" placeholder=' * Write Your Query' rows={4}/><br />
+     <button type='submit' className='mt-0 text-lg font-bold send-btn'>Submit</button>
       </form>
-      {/* <form action="">
-      <label htmlFor="" placeholder='Wite the message '></label>
-      <input type="text" name="" id="" />
-      </form> */}
-      <button type='submit' className='send-btn'>Submit</button>
+      </div>
+      
     </div>
   )
 }

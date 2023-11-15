@@ -1,28 +1,44 @@
-.contact{
-    height: 500px;
-    width: 500px;
-    /* background-color: azure; */
+.contact-wrapper{
+    height: 100%;
     display: flex;
+    width: 100%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-container{
+    height: 80%;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f3f1f1;
+    
+    border-radius:  0.25rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear;
+    text-align: center;
 }
 .name{
     height: 50px;
     width: 250px;
     border: 1px solid black ;
-    margin: 20px;
     border-radius: 5px;
 }
-.name1{
-    height: 70px;
+.message{
+    height: 90px;
     width: 280px;
-    margin: 20px;
     border: 1px solid black;
     border-radius: 5px;
+
 }
 .send-btn{
-    margin-top: 30px;
-    height: 50px;
-    width: 200px;
+    margin-top: 5px;
+    height: 40px;
+    width: 110px;
     font-size: larger;
     font-weight: bolder;
     color: darkgreen;
@@ -30,14 +46,34 @@
     border: 3px solid gray;
     cursor: pointer;
     text-align: center;
-    margin-left: 60px;
+    margin-left: 40px;
+    border-radius: 5%;
 }
 .send-btn:hover{
-    color: blue;
-    font-size:x-large;
-    font-weight: bolder;
+    
     background-color: lightgray;
 }
+.form-wrapper{
+    display: flex;
+    /* gap: 3px; */
+    flex-direction: column;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .contact-container{
+        flex-direction: column;
+        width: 40%;
+        padding: 1rem 1rem;
+    }
+  
+  }
+
 
 
 

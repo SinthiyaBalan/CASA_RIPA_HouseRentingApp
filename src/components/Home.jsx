@@ -47,16 +47,16 @@ function Home() {
         autoPlay={false}
         interval={5000}
         showThumbs={false}
-        style={{ height: "400px" }}
+        style={{ height: "300px" }}
       >
-        <div>
-          <img src={Nature} alt="Image 1" style={{ height: "100%",width :"95%" } } />
+        <div className="min-h-full">
+          <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/P5160010%20bijgesneden.jpeg?updatedAt=1695976723107`} alt="Image 1" style={{ height: "100%",width :"95%" } } />
         </div>
         <div className="min-h-full">
-          <img src={Sport} alt="Image 2" style={{ height: "100%",width :"95%" }} />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/IMG_7529.jpeg?updatedAt=1695976723184`} alt="Image 2" style={{ height: "100%",width :"95%" }} />
         </div>
         <div className="min-h-full">
-          <img src={Beach} alt="Image 3" style={{ height: "100%",width :"95%"}} />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/IMG_7364.jpeg?updatedAt=1695976723095`} alt="Image 3" style={{ height: "100%",width :"95%"}} />
         </div>
         {/* Add more images as needed */}
       </Carousel>
