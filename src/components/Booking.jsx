@@ -1,16 +1,21 @@
 import { useState, useEffect } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
+import Loader from "./Loader";
+import Error from "./Error";
 import "antd/dist/reset.css";
 import axios from "axios";
 import React from "react";
 import Room from "./Room";
 import moment from "moment";
-import { DatePicker, Space } from "antd";
+import { DatePicker } from "antd";
 const { RangePicker } = DatePicker;
 
 function Booking() {
   const [rooms, setrooms] = useState([]);
   const [loading, setloading] = useState();
   const [error, seterror] = useState();
+  const[fromdate,setfromdate] =useState();
+  const[todate,settodate] =useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,9 +36,17 @@ function Booking() {
 
     fetchData();
   }, []);
-  function filterbyDate(dates) {
-    console.log(moment(dates[0].format("DD-MM-YYYY")));
-    console.log(moment(dates[0].format("DD-MM-YYYY")));
+  function filterbyDate(dates, dateStrings) {
+    // Ensure that the dateStrings array contains two elements: start date and end date
+    if (dateStrings.length === 2) {
+      const startDate = moment(dateStrings[0], "DD-MM-YYYY");
+      const endDate = moment(dateStrings[1], "DD-MM-YYYY");
+      // Use startDate and endDate for filtering rooms or any other date-related operations
+      // console.log("Start Date:", startDate.format("DD-MM-YYYY"));
+      setfromdate(startDate.format("DD-MM-YYYY"))
+      // console.log("End Date:", endDate.format("DD-MM-YYYY"));
+      settodate(endDate.format("DD-MM-YYYY"))
+    }
   }
   return (
     <div className="container">
@@ -43,26 +56,22 @@ function Booking() {
         </div>
       </div>
       <div className="container">
-      <div className="row justify-content-center mt-5">      
-      {loading ? (
-        <h1>Loading...</h1>
-      ) : error ? (
-        <h1>Error</h1>
-      ) : (
-        rooms.map((room) => {
-          return (
-            <div className="col-md-9 mt-2">
-              <Room room={room} /> 
-              {/* <h1>there are {rooms.length}</h1>
-              <h1>{room.Name}</h1>
-              <Room room={room} /> */}
-            
-            </div>
-          );
-        })
-      )}
+        <div className="row justify-content-center mt-5">
+          {loading ? (
+            <Loader />
+          ) : rooms.length > 1 ? (
+            rooms.map((room) => {
+              return (
+                <div className="col-md-9 mt-2">
+                  <Room room={room} fromdate={fromdate} todate ={todate}/>
+                </div>
+              );
+            })
+          ) :  (
+            <Error />
+          )}
+        </div>
       </div>
-       </div>
     </div>
   );
 }
