@@ -88,7 +88,7 @@ function Nav() {
         </ul>
       </div>
       <div className="navbar-end gap-4">
-        <a className="btn bg-green-500 hover:bg-green-600">Book now</a>
+        <a style={{ backgroundColor: "#76a745"}}className="hover:bg-blue-700 font-bold  py-2 px-4 rounded ">Book now</a>
         <div className="h-8 w-8 m-2">
           <CIcon icon={icon.cilTranslate} size="sm" />
           {/* <ul className="menu menu-horizontal px-1">
