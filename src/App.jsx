@@ -10,12 +10,11 @@ import AdminLogin from "./components/AdminLogin";
 import loginData from "./data/loginDetails.json";
 import AdminHome from "./components/AdminHome";
 import { useState } from "react";
-import Contact from "./components/Contact";
-import Booking from "./components/Booking";
-import Bookingscreen from "./components/Bookingscreen";
-import Register from "./screens/Register";
-import Login from "./screens/Login";
-import GoogleMapComponent from "./components/GoogleMapComponent";
+import Contact from './components/Contact'
+import Booking from './components/Booking'
+import Bookingscreen from './components/Bookingscreen'
+import Gallery from './components/Gallery'
+
 
 function App() {
   const [user, setUser] = useState();
@@ -41,8 +40,8 @@ function App() {
         />
         <Route path="/AdminHome" element={<AdminHome user={user} />} />
         <Route path="/Register" element={<Register />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/Route" element={<GoogleMapComponent />} />
+        <Route path="/Route" element={<GoogleMapComponent />} /> 
+        <Route path='/GalleryImages' element={<Gallery/>} />
       </Routes>
       <Footer />
     </>

@@ -47,16 +47,19 @@ function Home() {
         autoPlay={false}
         interval={5000}
         showThumbs={false}
-        style={{ height: "400px" }}
+        // style={{ height: "200px" }}
       >
-        <div>
-          <img src={Nature} alt="Image 1" style={{ height: "100%",width :"95%" } } />
+        <div className="min-h-full">
+          <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/IMG_1663.jpeg?updatedAt=1695976723920`} alt="Image 1" style={{ height: "100%",width :"95%" } } />
         </div>
         <div className="min-h-full">
-          <img src={Sport} alt="Image 2" style={{ height: "100%",width :"95%" }} />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/IMG_7529.jpeg?updatedAt=1695976723184`} alt="Image 2" style={{ height: "100%",width :"95%" }} />
         </div>
         <div className="min-h-full">
-          <img src={Beach} alt="Image 3" style={{ height: "100%",width :"95%"}} />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Pool/IMG_8176.jpeg?updatedAt=1700848180088`} alt="Image 3" style={{ height: "100%",width :"95%"}} />
+        </div>
+        <div className="min-h-full">
+          <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/2013-05-20-09.36.jpeg?updatedAt=1695976723039`} alt="Image 3" style={{ height: "100%",width :"95%"}} />
         </div>
         {/* Add more images as needed */}
       </Carousel>
