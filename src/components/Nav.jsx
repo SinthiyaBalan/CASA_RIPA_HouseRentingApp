@@ -68,7 +68,7 @@ function Nav() {
               <summary>ABOUT US</summary>
               <ul className="p-2">
                 <li>
-                  <a>Route to Us</a>
+                  <Link to="/Route">Route to Us</Link>
                 </li>
                 <li>
                 <Link to="/GalleryImages">Gallery</Link>
@@ -88,7 +88,10 @@ function Nav() {
         </ul>
       </div>
       <div className="navbar-end gap-4">
+      <Link to="/Booking">
         <a style={{ backgroundColor: "#76a745"}}className="hover:bg-blue-700 font-bold  py-2 px-4 rounded ">Book now</a>
+        </Link>
+
         <div className="h-8 w-8 m-2">
           <CIcon icon={icon.cilTranslate} size="sm" />
           {/* <ul className="menu menu-horizontal px-1">
