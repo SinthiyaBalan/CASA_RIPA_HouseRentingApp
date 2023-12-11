@@ -68,7 +68,7 @@ function Nav() {
               <summary>ABOUT US</summary>
               <ul className="p-2">
                 <li>
-                  <a>Route to Us</a>
+                  <Link to="/Route">Route to Us</Link>
                 </li>
                 <li>
                   <a>Gallery</a>

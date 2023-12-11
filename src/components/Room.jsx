@@ -17,10 +17,13 @@ function Room({ room, fromdate, todate }) {
               style={{ width: 500, height: 300, padding: 10 }}
             />
                     <div className="div">
-                <iframe
+                    <div className="div">
+      <iframe
         className="calendar"  style={{ width: 500, height: 300, padding: 10 }}
-        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FBerlin&hl=en_GB&showTz=0&showCalendars=0&showTabs=0&showTitle=1&src=ZDcwNThkOWQzODM5YzczZDYzNTM1Y2IxY2U5MDE4OWMwNjA2NTMzNmYyZjAzYjU0NzE5ZjAxMGI2NTVkMGYwYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00"
+        src = {room.Calendar}
+        // src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FBerlin&hl=en_GB&showTz=0&showCalendars=0&showTabs=0&showTitle=1&src=ZDcwNThkOWQzODM5YzczZDYzNTM1Y2IxY2U5MDE4OWMwNjA2NTMzNmYyZjAzYjU0NzE5ZjAxMGI2NTVkMGYwYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00"
       ></iframe> 
+      </div>
       </div>
             <div className="m-4 sm:flex flex-col lg: flex flex-row gap-2">
               <h1>Name: {room.Name}</h1>
@@ -35,16 +38,22 @@ function Room({ room, fromdate, todate }) {
                 <Button className="btn btn-primary m-2" onClick={handleShow}>
                   View Details
                 </Button>
-        
               </div>
-            
-              
             </div>
           </div>
         </div>
         
       </div>
-
+      {/* <div className="div">
+      <iframe
+        className="calendar"  style={{ width: 500, height: 300, padding: 10 }}
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FBerlin&hl=en_GB&showTz=0&showCalendars=0&showTabs=0&showTitle=1&src=ZDcwNThkOWQzODM5YzczZDYzNTM1Y2IxY2U5MDE4OWMwNjA2NTMzNmYyZjAzYjU0NzE5ZjAxMGI2NTVkMGYwYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00"
+      ></iframe> 
+      <iframe 
+        className="calendar" style={{ width: 500, height: 300, padding: 10 }}
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FBerlin&hl=en_GB&showTz=0&showCalendars=0&showTabs=0&showTitle=1&src=NDIxZjg0NzhlN2FlMjMzYjIzYmMyZTc2NDY2NDE2YzdjOGEwZWMzZjkzMWU1ZTA4ZTdhNjE4ZDAzZTFmYTBlNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00">
+      </iframe>
+      </div> */}
       {/* Modal to display room images */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

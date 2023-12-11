@@ -32,7 +32,7 @@ function Home() {
     return (
       <p className="has-text-left">
         {resultString}
-        <span onClick={toggleIsTruncated} className="btn m-4 btn-info btn-xs">
+        <span onClick={toggleIsTruncated} style={{ backgroundColor: "#76a745"}} className="btn m-4 btn-info btn-xs">
           {isTruncated ? "Read More" : "Read Less"}
         </span>
       </p>
@@ -85,7 +85,14 @@ function Home() {
             In the heart of Le Marche region our recently renovated and restored
             farmhouse sits just below the Hilltop of Cupramontana. From here you
             can relax and take in the breathtaking and panoramic views over the
-            surrounding countryside. We hope to welcome you to this paradise!
+            surrounding countryside.
+            The region of Le Marche is a beautiful hilly and mountainous region and 
+            still relatively undiscovered by tourists, but yet it is only 30 minutes 
+            away from Ancona Airport. Here you can spend your holiday without stress 
+            and enjoy everything the region has to offer, from the wonderful food and 
+            famous Verdicchio wine, the warmth and friendliness of the people, 
+            the culture, nature and fabulous blue-flag beaches along the Adriatic Coast.
+            We hope to welcome you to this paradise!
           </ReadMore>
         </p>
 
