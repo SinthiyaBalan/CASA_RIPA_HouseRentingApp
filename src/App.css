@@ -9,8 +9,14 @@
     padding: 0;
     box-sizing: border-box;
   }
+  /* :root {
+    --primary-color: red; 
+  } */
   body{
     font-family: 'Aref Ruqaa Ink', serif;
-   
-  }
+   }
+
+   /* .btn{
+    color: var(--primary-color);
+   } */
   
