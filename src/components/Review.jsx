@@ -6,7 +6,6 @@ import './ReviewSlider.css';
 function Review() {
 
   const [index, setIndex] = useState(0);
-  console.log(people.reviews[0]);
   const {name, job, text} = people.reviews[index];
 
   const checkNumber = (number) => {
