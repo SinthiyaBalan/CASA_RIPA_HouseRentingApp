@@ -11,6 +11,7 @@ import loginData from "./data/loginDetails.json";
 import AdminHome from "./components/AdminHome";
 import { useState } from "react";
 import Contact from './components/Contact'
+import ContactPage from "./components/ContactPage";
 import Booking from './components/Booking'
 import Bookingscreen from './components/Bookingscreen'
 import Gallery from './components/Gallery';
@@ -41,6 +42,7 @@ function App() {
           element={<Bookingscreen />}
         />
         <Route path="/AdminHome" element={<AdminHome user={user} />} />
+        <Route path="ContactPage" element = {<ContactPage/>}/>
         {/* <Route path="/Register" element={<Register />} />
         <Route path="/Route" element={<GoogleMapComponent />} />  */}
         {/* <GoogleMapComponent/> */}
