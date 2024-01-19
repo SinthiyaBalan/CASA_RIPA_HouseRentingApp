@@ -36,6 +36,7 @@ function Bookingscreen() {
       .then((result) => {
           console.log(result.text);
           form.current.reset();
+          alert('Email sent successfully!Thank you for choosing to stay at our place. We will revert soon!');
       }, (error) => {
           console.log(error.text);
       }
@@ -126,6 +127,11 @@ function Bookingscreen() {
         <label htmlFor="user_phone_number">Enter Phone Number:
           <input type="number" className='name' name="user_phone_number" placeholder=' * Phone Number' />
         </label>
+      
+          <a href="http://localhost:5173/Booking">
+            <h1>CLICK HERE</h1>
+           </a>   <p> to check for the available dates
+          and choose the dates for your stay! </p>
         <label htmlFor="from_date">Select From Date:
           <input type="date" className='name' id="from_date" name="from_date" required />
         </label>
@@ -139,7 +145,7 @@ function Bookingscreen() {
           checked={checkedItems['item1'] || false}
           onChange={() => handleCheckboxChange('item1')}
         />
-       Extra Bed for adult
+       Extra Adult's Bed 
       </label>
       <br />
 
@@ -150,7 +156,7 @@ function Bookingscreen() {
           checked={checkedItems['item2'] || false}
           onChange={() => handleCheckboxChange('item2')}
         />
-       Kids Bed
+       Extra Kid's Bed
       </label>
       <br />
 
@@ -159,6 +165,7 @@ function Bookingscreen() {
         </label>
         <button type='submit' className='mt-0 text-lg font-bold send-btn'>Submit</button>
       </form>
+      <h1>*Thank you for choosing to stay at our place. We will revert soon!</h1>
       </div>
       </div>
     

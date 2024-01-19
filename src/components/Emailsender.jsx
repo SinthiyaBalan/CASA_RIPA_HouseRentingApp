@@ -21,9 +21,9 @@ const EmailSender = ({ fromdate, todate, totaldays, room, totalAmount }) => {
         formData,
         "nHlSdNaHTrzGYLWC0"
       );
-
       console.log(result.text);
       formRef.current.reset();
+      console.log("alert")
     } catch (error) {
       console.error(error.text);
     }
@@ -35,7 +35,6 @@ const EmailSender = ({ fromdate, todate, totaldays, room, totalAmount }) => {
         <input type="text" className='name' name="user_name" placeholder=' * Name'/><br />
         <input type="email" className='name' name="user_email" placeholder=' * Email' /><br />
         <input type="number" className='name' name="user_phone_number" placeholder=' * Phone Number' /><br />
-
         <input type="hidden" name="fromdate" value={fromdate} />
         <input type="hidden" name="todate" value={todate} />
         <input type="hidden" name="totaldays" value={totaldays} />
@@ -49,6 +48,8 @@ const EmailSender = ({ fromdate, todate, totaldays, room, totalAmount }) => {
         <p>Max Count = {room.MaxCount}</p>
         <p>Total amount = {totalAmount}</p>
       </form>
+      {/* <button onClick={() => { this.sendEmail(); alert('Email sending in progress...'); }}>Send Email</button> */}
+      
       <button onClick={sendEmail}>Send Email</button>
     </div>
   );

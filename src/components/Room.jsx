@@ -30,11 +30,11 @@ function Room({ room, fromdate, todate }) {
               <p>Description: {room.Description}</p>
               <p>MaxCount: {room.MaxCount}</p>
               <p>Type: {room.Type}</p>
-              <p>Rent: {room.renterpay}</p>
+              <p>Rent: {room.renterpay}€ per day</p>
               <div className="m-2">
                 <Link to={`/book/${room._id}/${fromdate}/${todate}`}>
                 {/* <Link to ={'/ContactPage'}> */}
-                  <Button style={{ backgroundColor: "#76a745"}}className="hover:bg-blue-700 font-bold black py-2 px-4 rounded ">Book Now</Button>
+                  <Button style={{ backgroundColor: "#76a745"}}className="hover:bg-blue-700 font-bold black py-2 px-4 rounded ">Reserve</Button>
                 </Link>
                 {/* <Button className="btn btn-primary m-2" onClick={handleShow}>
                   View Details
