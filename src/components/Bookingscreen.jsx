@@ -1,24 +1,58 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+import './Bookingscreen.css';
 import { useParams } from "react-router-dom";
-import Room from "./Room";
+import axios from "axios";
 import moment from "moment";
 import Loader from "./Loader";
 import Error from "./Error";
 
+// import EmailSender from "./Emailsender"; // Adjust the import path accordingly
+
 function Bookingscreen() {
-  const { roomid } = useParams();
-  const { fromdate } = useParams();
-  const { todate } = useParams();
+  const [checkedItems, setCheckedItems] = useState({}); // State to track checked items
+
+  const handleCheckboxChange = (itemName) => {
+    setCheckedItems(prevState => ({
+      ...prevState,
+      [itemName]: !prevState[itemName] // Toggle the checked state
+    }));
+  };
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   // Do something with the checked items (e.g., send to the server)
+  //   console.log('Checked items:', checkedItems);
+  // };
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_3aqzjic', 
+      'template_q80d69v', 
+      form.current,
+      'nHlSdNaHTrzGYLWC0')
+      .then((result) => {
+          console.log(result.text);
+          form.current.reset();
+          alert('Email sent successfully!Thank you for choosing to stay at our place. We will revert soon!');
+      }, (error) => {
+          console.log(error.text);
+      }
+      
+      );
+    };
+  const { roomid, fromdate, todate } = useParams();
+  const formRef = useRef();
   const [room, setRoom] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const fromdateMoment = moment(fromdate, "DD-MM-YYYY");
   const todateMoment = moment(todate, "DD-MM-YYYY");
+  const totaldays = moment.duration(todateMoment.diff(fromdateMoment)).asDays() + 1;
+  const [totalAmount, setTotalAmount] = useState(null);
 
-  const totaldays =
-    moment.duration(todateMoment.diff(fromdateMoment)).asDays() + 1;
-  const [totalAmount, settotalAmount] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -29,8 +63,8 @@ function Bookingscreen() {
           { roomid: roomid.toString() }
         );
         setRoom(response.data);
-        const newtotalamount = totaldays * response.data.renterpay;
-        settotalAmount(newtotalamount);
+        const newTotalAmount = totaldays * response.data.renterpay;
+        setTotalAmount(newTotalAmount);
         setLoading(false);
       } catch (error) {
         setError(true);
@@ -41,7 +75,7 @@ function Bookingscreen() {
     fetchData();
   }, [roomid, totaldays]);
 
-  async function bookRoom() {
+  const bookRoom = async () => {
     const bookingDetails = {
       roomid: room._id,
       fromdate,
@@ -49,6 +83,7 @@ function Bookingscreen() {
       totalAmount,
       totaldays,
     };
+
     try {
       const result = await axios.post(
         "http://localhost:8080/api/bookings/bookroom",
@@ -56,40 +91,84 @@ function Bookingscreen() {
       );
 
       if (result.data && result.data.success) {
-        // Handle a successful booking
         console.log("Booking successful!");
+        // Optionally, you can trigger the email sending here as well
       } else {
-        // Handle a failed booking
         console.error("Booking failed:", result.data.message);
       }
     } catch (error) {
       console.error("An error occurred while booking:", error.message);
     }
-  }
+  };
+
   return (
     <div>
-      <h1 className="text-center">Bookingscreen</h1>
+     
       {loading ? (
         <Loader />
       ) : room ? (
         <>
+        {/* <h1> {room.Name}</h1> */}
           <div className="flex">
             {room.imageurls && room.imageurls.length > 0 && (
               <img src={room.imageurls[0]} alt={room.Name} />
             )}
-            <div className="m-14">
-              <h1>Name: {room.Name}</h1>
-              {/* <h1>Room id = {roomid}</h1> */}
-              <p>From Date:{fromdate}</p>
-              <p>To Date:{todate}</p>
-              <p>Total days: {totaldays}</p>
-              <p>Max Count = {room.MaxCount}</p>
-              <p>Total amount = {totalAmount}</p>
-            </div>
-          </div>
-          <button className="btn btn-primary float:right" onClick={bookRoom}>
-            Paynow
-          </button>
+            <div className='contact-container'>
+      <h2 className='mt-0 mb-5 text-lg font-bold'>
+        Booking details:  {room.Name}
+      </h2>
+      <form className="form-wrapper" ref={form} onSubmit={sendEmail}>
+        <label htmlFor="user_name">Enter your Name:
+          <input type="text" className='name' name="user_name" placeholder=' * Name' />
+        </label>
+        <label htmlFor="user_email">Enter your Email:
+          <input type="email" className='name' name="user_email" placeholder=' * Email' />
+        </label>
+        <label htmlFor="user_phone_number">Enter Phone Number:
+          <input type="number" className='name' name="user_phone_number" placeholder=' * Phone Number' />
+        </label>
+      
+          <a href="http://localhost:5173/Booking">
+            <h1>CLICK HERE</h1>
+           </a>   <p> to check for the available dates
+          and choose the dates for your stay! </p>
+        <label htmlFor="from_date">Select From Date:
+          <input type="date" className='name' id="from_date" name="from_date" required />
+        </label>
+        <label htmlFor="to_date">Select To Date:
+          <input type="date" className='name' name="to_date" required />
+        </label>
+        <label>
+        <input
+          type="checkbox"
+          name="Extra_adult_bed"
+          checked={checkedItems['item1'] || false}
+          onChange={() => handleCheckboxChange('item1')}
+        />
+       Extra Adult's Bed 
+      </label>
+      <br />
+
+      <label>
+        <input
+          type="checkbox"
+          name="Extra_Kids_Bed"
+          checked={checkedItems['item2'] || false}
+          onChange={() => handleCheckboxChange('item2')}
+        />
+       Extra Kid's Bed
+      </label>
+      <br />
+
+        <label htmlFor="message">Enter your Message:
+          <textarea className='message' name="message" placeholder=' * Write Your Query' rows={4} />
+        </label>
+        <button type='submit' className='mt-0 text-lg font-bold send-btn'>Submit</button>
+      </form>
+      <h1>*Thank you for choosing to stay at our place. We will revert soon!</h1>
+      </div>
+      </div>
+    
         </>
       ) : (
         <Error />

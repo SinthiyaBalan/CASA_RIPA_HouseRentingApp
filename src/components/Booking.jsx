@@ -51,9 +51,9 @@ function Booking() {
   return (
     <div className="container">
       <div className="row mt-5">
-        <div className="col-md-3">
+        {/* <div className="col-md-3">
           <RangePicker format="DD-MM-YYYY" onChange={filterbyDate} />
-        </div>
+        </div> */}
       </div>
       <div className="container">
         <div className="row justify-content-center mt-5">
