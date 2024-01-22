@@ -27,7 +27,7 @@ function ExploreSurroundings() {
         <h2 className="m-4 font-bold text-center text-lg">
           ENJOY OUR PARADISE
         </h2>
-        <div className="card m-6 lg:card-side bg-base-100 shadow-2xl">
+        <div className="card m-4 lg:card-side bg-base-100 shadow-2xl">
           <div className="card-body">
             <h2 className="card-title">Beach</h2>
             <p>
@@ -53,7 +53,7 @@ function ExploreSurroundings() {
           </figure>
         </div>
       </div>
-      <div className="card m-6 lg:card-side bg-base-100 shadow-2xl" id="1">
+      <div className="card m-4 lg:card-side bg-base-100 shadow-2xl" id="1">
         <figure id="1">
           <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/winery.jpg?updatedAt=1705919487489`}  alt="Winery" />
         </figure>
@@ -67,7 +67,7 @@ function ExploreSurroundings() {
         </div>
       </div>
 
-      <div className="card m-6 lg:card-side bg-base-100 shadow-2xl">
+      <div className="card m-4 lg:card-side bg-base-100 shadow-2xl">
         <div className="card-body">
           <h2 className="card-title">Cupramontana</h2>
           <p>
@@ -88,7 +88,7 @@ function ExploreSurroundings() {
           <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/8943303_orig.jpg?updatedAt=1705919487694`} alt="Nature" />
         </figure>
       </div>
-      <div className="card m-6 lg:card-side bg-base-100 shadow-2xl">
+      <div className="card m-4 lg:card-side bg-base-100 shadow-2xl">
         <figure className="figure large">
           <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/Santuranio.png?updatedAt=1705915322248`} alt="Santuranio" />
           <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/cupromonta1.jpg?updatedAt=1705920157283`} alt="Santuranio2" />
@@ -127,7 +127,7 @@ function ExploreSurroundings() {
     
         </div>
       </div>
-      <div className="card m-6 lg:card-side bg-base-100 shadow-2xl">
+      <div className="card m-4 lg:card-side bg-base-100 shadow-2xl">
         <div className="card-body">
           <h2 className="card-title">Scooty Rental</h2>
           <p>
@@ -143,7 +143,7 @@ function ExploreSurroundings() {
           
         </figure>
       </div>
-      <div className="card m-6 lg:card-side bg-base-100 shadow-2xl">
+      <div className="card m-4 lg:card-side bg-base-100 shadow-2xl">
         <figure className="figure large">
           <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/Restaurant.png?updatedAt=1705915322240`} alt="Shopping" />
           <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/1496625.jpg?updatedAt=1705920342156`} alt="Shopping" />
