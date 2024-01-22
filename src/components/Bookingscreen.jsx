@@ -77,15 +77,16 @@ function Bookingscreen() {
             {room.imageurls && room.imageurls.length > 0 && (
               <img src={room.imageurls[0]} alt={room.Name} />
             )}
-            <div className="m-14">
+           <div className="m-14">
               <h1>Name: {room.Name}</h1>
-              {/* <h1>Room id = {roomid}</h1> */}
+               <h1>Room id = {roomid}</h1>
               <p>From Date:{fromdate}</p>
               <p>To Date:{todate}</p>
               <p>Total days: {totaldays}</p>
               <p>Max Count = {room.MaxCount}</p>
               <p>Total amount = {totalAmount}</p>
-            </div>
+            </div> 
+     
           </div>
           <button className="btn btn-primary float:right" onClick={bookRoom}>
             Paynow

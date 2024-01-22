@@ -1,12 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-import Winery from "/src/assets/images/Winery.png";
-import Beach from "/src/assets/images/Beach.png";
-import Nature from "/src/assets/images/Nature.png";
-import Restaurant from "/src/assets/images/Restaurant.png";
-import Santuranio from "/src/assets/images/Santuranio.png";
-import Sport from "/src/assets/images/Sport.png";
+
+import './ExploreSurroundings.css';
 
 function ExploreSurroundings() {
   function ReadMore({ children, maxCharacterCount = 100 }) {
@@ -31,7 +27,7 @@ function ExploreSurroundings() {
         <h2 className="m-4 font-bold text-center text-lg">
           ENJOY OUR PARADISE
         </h2>
-        <div className="card m-4 lg:card-side bg-base-100 shadow-xl">
+        <div className="card m-6 lg:card-side bg-base-100 shadow-2xl">
           <div className="card-body">
             <h2 className="card-title">Beach</h2>
             <p>
@@ -50,16 +46,16 @@ function ExploreSurroundings() {
               and dancing and the park has several waterslides, including the
               highest in Europe
             </p>
-            <div className="card-actions justify-end"></div>
+            {/* <div className="card-actions justify-end"></div> */}
           </div>
           <figure>
-            <img src={Beach} alt="Beach" />
+            <img src={`https://ik.imagekit.io/Casaripadummy/Beaches/IMG_6850.jpeg?updatedAt=1695976473752`} alt="Beach" />
           </figure>
         </div>
       </div>
-      <div className="card m-4 lg:card-side bg-base-100 shadow-xl" id="1">
+      <div className="card m-6 lg:card-side bg-base-100 shadow-2xl" id="1">
         <figure id="1">
-          <img src={Winery} alt="Winery" />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/winery.jpg?updatedAt=1705919487489`}  alt="Winery" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">Winery</h2>
@@ -71,7 +67,7 @@ function ExploreSurroundings() {
         </div>
       </div>
 
-      <div className="card m-4 lg:card-side bg-base-100 shadow-xl">
+      <div className="card m-6 lg:card-side bg-base-100 shadow-2xl">
         <div className="card-body">
           <h2 className="card-title">Cupramontana</h2>
           <p>
@@ -86,15 +82,16 @@ function ExploreSurroundings() {
             something to do. The most famous and oldest 'La Sagra dell'uva' is
             held in Cupramontana each year on the first weekend of October.
           </p>
-          <div className="card-actions justify-end"></div>
+          
         </div>
         <figure>
-          <img src={Nature} alt="Nature" />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/8943303_orig.jpg?updatedAt=1705919487694`} alt="Nature" />
         </figure>
       </div>
-      <div className="card m-4 lg:card-side bg-base-100 shadow-xl">
-        <figure>
-          <img src={Santuranio} alt="Santuranio" />
+      <div className="card m-6 lg:card-side bg-base-100 shadow-2xl">
+        <figure className="figure large">
+          <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/Santuranio.png?updatedAt=1705915322248`} alt="Santuranio" />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/cupromonta1.jpg?updatedAt=1705920157283`} alt="Santuranio2" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">Nearby Cupramontano</h2>
@@ -127,10 +124,10 @@ function ExploreSurroundings() {
           who himself came from a small town close to the caves. In the cave
           next to it is the church of Madonna of Frasassi, built centuries ago
           under the overhanging rock
-          <div className="card-actions justify-end"></div>
+    
         </div>
       </div>
-      <div className="card m-4 lg:card-side bg-base-100 shadow-xl">
+      <div className="card m-6 lg:card-side bg-base-100 shadow-2xl">
         <div className="card-body">
           <h2 className="card-title">Scooty Rental</h2>
           <p>
@@ -139,15 +136,17 @@ function ExploreSurroundings() {
             beautiful roads of Le Marche yourself without any problem. On
             request organized trips can be arranged.
           </p>
-          <div className="card-actions justify-end"></div>
+       
         </div>
         <figure>
-          <img src={Sport} alt="Sport" />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/scooty%20rental.jpg?updatedAt=1705916580202`} alt="Rental" />
+          
         </figure>
       </div>
-      <div className="card m-4 lg:card-side bg-base-100 shadow-xl">
-        <figure>
-          <img src={Restaurant} alt="Shopping" />
+      <div className="card m-6 lg:card-side bg-base-100 shadow-2xl">
+        <figure className="figure large">
+          <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/Restaurant.png?updatedAt=1705915322240`} alt="Shopping" />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/1496625.jpg?updatedAt=1705920342156`} alt="Shopping" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">Shopping</h2>
@@ -183,7 +182,7 @@ function ExploreSurroundings() {
             Clothing, shoes, bags and accessories from Gianfranco Ferrè, Just
             Cavalli, Galliano and Versace
           </p>
-          <div className="card-actions justify-end"></div>
+          
         </div>
       </div>
     </>

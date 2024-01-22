@@ -32,7 +32,8 @@ function Room({ room, fromdate, todate }) {
               <p>Type: {room.Type}</p>
               <p>Rent: {room.renterpay}</p>
               <div className="m-2">
-                <Link to={`/book/${room._id}/${fromdate}/${todate}`}>
+                {/* <Link to={`/book/${room._id}/${fromdate}/${todate}`}> */}
+                <Link to={"/bookingcontact"}> 
                   <Button className="btn btn-primary m-2">Book Now</Button>
                 </Link>
                 <Button className="btn btn-primary m-2" onClick={handleShow}>

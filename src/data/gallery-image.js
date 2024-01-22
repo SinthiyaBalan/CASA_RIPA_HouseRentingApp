@@ -48,4 +48,12 @@ export const images = [
         original: "https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/IMG_6251.jpeg?updatedAt=1695976723156",
         thumbnail: "https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/IMG_6251.jpeg?updatedAt=1695976723156",
       },
+      {
+        original: "https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/3480561_orig.jpg?updatedAt=1705916759233",
+        thumbnail: "https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/3480561_orig.jpg?updatedAt=1705916759233",
+      },
+      {
+        original: "https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/img-7541_orig.jpg?updatedAt=1705916615406",
+        thumbnail: "https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/img-7541_orig.jpg?updatedAt=1705916615406",
+      },
   ];

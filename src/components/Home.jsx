@@ -3,16 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-import Winery from "/src/assets/images/Winery.png";
-import Beach from "/src/assets/images/Beach.png";
-import Nature from "/src/assets/images/Nature.png";
-import Restaurant from "/src/assets/images/Restaurant.png";
-import Santuranio from "/src/assets/images/Santuranio.png";
-import Sport from "/src/assets/images/Sport.png";
-
 import Contact from '/src/components/Contact';
-
-
 import Review from "./Review";
 import { Link } from "react-router-dom";
 import ExploreSurroundings from "./ExploreSurroundings";
@@ -49,33 +40,21 @@ function Home() {
         showThumbs={false}
         // style={{ height: "200px" }}
       >
+       
         <div className="min-h-full">
-          <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/IMG_1663.jpeg?updatedAt=1695976723920`} alt="Image 1" style={{ height: "100%",width :"95%" } } />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/IMG_1663.jpeg?updatedAt=1695976723920`} alt="Image 1" style={{ height: "80%",width :"95%" } } />
         </div>
         <div className="min-h-full">
-          <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/IMG_7529.jpeg?updatedAt=1695976723184`} alt="Image 2" style={{ height: "100%",width :"95%" }} />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/IMG_7529.jpeg?updatedAt=1695976723184`} alt="Image 2" style={{ height: "80%",width :"95%" }} />
         </div>
         <div className="min-h-full">
-          <img src={`https://ik.imagekit.io/Casaripadummy/Pool/IMG_8176.jpeg?updatedAt=1700848180088`} alt="Image 3" style={{ height: "100%",width :"95%"}} />
+          <img src={`https://ik.imagekit.io/Casaripadummy/Pool/IMG_8176.jpeg?updatedAt=1700848180088`} alt="Image 3" style={{ height: "80%",width :"95%"}} />
         </div>
         <div className="min-h-full">
           <img src={`https://ik.imagekit.io/Casaripadummy/Outside&Header%20Homepage/2013-05-20-09.36.jpeg?updatedAt=1695976723039`} alt="Image 3" style={{ height: "100%",width :"95%"}} />
         </div>
         {/* Add more images as needed */}
       </Carousel>
-      {/* <div
-        className="hero min-h-screen"
-        style={{ backgroundImage: "url(/src/assets/images/hero3.jpg)" }}
-      >
-        <div className="hero-overlay bg-opacity-0"></div>
-        <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            {/* <h1 className="mb-5 text-5xl font-bold">Hello there</h1> */}
-      {/* <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p> */}
-      {/* <button className="btn btn-primary">BOOK NOW</button> */}
-      {/* </div>
-        </div>
-      // </div> */}
 
       <div>
         <h2 className="m-6 font-bold text-lg">Welcome to Casa Ripa</h2>
@@ -84,9 +63,9 @@ function Home() {
         </h4>
 
         <p className="m-6 font-custom text-justify ">
-          <ReadMore>
+        
             In the heart of Le Marche region our recently renovated and restored
-            farmhouse sits just below the Hilltop of Cupramontana. From here you
+            farmhouse sits just below the Hilltop of Cupramontana. <ReadMore>From here you
             can relax and take in the breathtaking and panoramic views over the
             surrounding countryside.
             The region of Le Marche is a beautiful hilly and mountainous region and 
@@ -104,112 +83,78 @@ function Home() {
       <div className="flex justify-evenly flex-col lg:flex-row">
           
         <article className="beach">
+        <Link to="/ExploreSurroundings" target="_top">
             <img
-              src={Beach}
+              src={'https://ik.imagekit.io/Casaripadummy/Beaches/IMG_3394.jpeg?updatedAt=1695976469464'}
               alt="Casa ripa beach image"
-              className="w-72 m-6 rounded-lg shadow-lg mb-4"
+              target="_top"
+              className="w-72 h-44 m-6 rounded-lg shadow-lg mb-4"
             />
+         </Link>
             <h2 className="m-6 text-lg font-bold">Beach</h2>
-            <p className="font-custom w-72 text-justify ml-4 p-2">
-              The Adriatic coast is about 35km away and there are several
-              beaches with umbrellas and sunbeds.
-              <br />
-              <b>More</b>
-              <FontAwesomeIcon icon={faCaretRight} />
-            </p>
-          </article>
+        </article>
 
           <article className="places to visit">
+          <Link to="/ExploreSurroundings" target="_top">
             <img
-              src={Santuranio}
+              src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/Santuranio.png?updatedAt=1705915322248`}
               alt="Casa ripa santuranio image"
-              className="w-72 m-4 rounded-lg shadow-lg mb-4"
+              className="w-72 h-44 m-6 rounded-lg shadow-lg mb-4"
             />
+           </Link>
             <h2 className="m-6 text-lg font-bold">
               Places to visit
             </h2>
-            <p className="font-custom w-72 text-justify ml-4 p-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              porttitor accumsan tincidunt. Proin sagittis nisl in tortor.
-              <br />
-              <b>More</b>
-              <FontAwesomeIcon icon={faCaretRight} />
-            </p>
           </article>
 
           <article className="Nature and activities">
+          <Link to="/ExploreSurroundings" target="_top">
             <img
-              src={Sport}
+              src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/Sport.png?updatedAt=1705915322224`}
               alt="Casa ripa sport image"
-              className="w-72 m-6 rounded-lg shadow-lg mb-4"
+              className="w-72 h-44 m-6 rounded-lg shadow-lg mb-4"
             />
+           </Link>
             <h2 className="m-6 text-lg font-bold">Nature and Activities</h2>
-            <p className="font-custom w-72 text-justify ml-4 p-2">
-              Discover the range of sports available to help you relax and keep
-              fit around CASA RIPA
-              <br />
-              <b>More</b>
-              <FontAwesomeIcon icon={faCaretRight} />
-            </p>
           </article>
         </div>
 
         <div className="flex justify-evenly flex-col lg:flex-row">
           <article className="winery">
-            <Link to="/ExploreSurroundings">
+            <Link to="/ExploreSurroundings" target="_top">
               <img
-                src={Winery}
+                src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/Winery.png?updatedAt=1705922079954`}
                 alt="Casa ripa winery image"
-                className="w-72 m-6 rounded-lg shadow-lg mb-4"
+                target="_top"
+                className="w-72 h-44 m-6 rounded-lg shadow-lg mb-4"
               />
             </Link>
             <h2 className="m-6 text-lg font-bold">Winery</h2>
-            <p className="font-custom w-72 text-justify ml-4 p-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              porttitor accumsan tincidunt. 
-              <br />
-              <b>More</b>
-              <FontAwesomeIcon icon={faCaretRight} />
-            </p>
           </article>
           
          <article className="Nature">
+         <Link to="/ExploreSurroundings" target="_top">
             <img
-              src={Nature}
+              src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/cupromonta.jpg?updatedAt=1705918192589`}
               alt="Casa ripa nature image"
-              className="w-72 m-6 rounded-lg shadow-lg mb-4"
+              className="w-72 h-44 m-6 rounded-lg shadow-lg mb-4"
             />
+           </Link>
             <h2 className="m-6 text-lg font-bold">Near by Cupramontana</h2>
-            <p className="font-custom w-72 text-justify ml-4 p-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              porttitor accumsan tincidunt. Proin sagittis nisl in tortor
-              hendrerit tincidunt.
-              <br />
-              <b>More</b>
-              <FontAwesomeIcon icon={faCaretRight} />
-            </p>
-          </article> 
+         </article> 
 
           <article className="restaurant">
+          <Link to="/ExploreSurroundings">
             <img
-              src={Restaurant}
+              src={`https://ik.imagekit.io/Casaripadummy/Explore%20Surrounding%20images/Restaurant.png?updatedAt=1705915322240`}
               alt="Casa ripa restaurant image"
-              className="w-72 m-6 rounded-lg shadow-lg mb-4"
+              className="w-72 h-44 m-6 rounded-lg shadow-lg mb-4"
             />
+          </Link>
             <h2 className="m-6 text-lg font-bold">Restaurants and Shops</h2>
-            <p className="font-custom w-72 text-justify ml-4 p-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              porttitor accumsan tincidunt. Proin sagittis nisl in tortor
-              hendrerit tincidunt.
-              <br />
-              <b>More</b>
-              <FontAwesomeIcon icon={faCaretRight} />
-            </p>
           </article>
         </div>
       </div>
-
-
 
       <Review />
 
