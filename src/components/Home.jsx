@@ -7,12 +7,34 @@ import Contact from '/src/components/Contact';
 import Review from "./Review";
 import { Link } from "react-router-dom";
 import ExploreSurroundings from "./ExploreSurroundings";
+import './Home.css';
 
 
 function Home() {
-  const top = () => {
-    window.scrollTo(0, 0);
+
+  const [showBtn, setShowBtn] = useState("myBtn none");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction();
   };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      setShowBtn("myBtn");
+    } else {
+      setShowBtn("none");
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   function ReadMore({ children, maxCharacterCount = 150 }) {
     const text = children;
     const [isTruncated, setIsTruncated] = useState(true);
@@ -57,12 +79,12 @@ function Home() {
       </Carousel>
 
       <div>
-        <h2 className="m-6 font-bold text-lg">Welcome to Casa Ripa</h2>
-        <h4 className="font-custom text-justify m-6">
-          Holiday Home @ Cupramontana, Le Marche, Italy
+        <h2 className="m-4 font-bold text-xl">Welcome to Casa Ripa</h2>
+        <h4 className="font-custom text-justify text-lg m-4">
+          Holiday Home @ Cupramontana, Le Marche, Italy.
         </h4>
 
-        <p className="m-6 font-custom text-justify ">
+        <p className="m-4 font-custom text-justify ">
         
             In the heart of Le Marche region our recently renovated and restored
             farmhouse sits just below the Hilltop of Cupramontana. <ReadMore>From here you
@@ -78,7 +100,7 @@ function Home() {
           </ReadMore>
         </p>
 
-        <h2 className="m-6 font-bold text-lg">ENJOY OUR PARADISE</h2>
+        <h2 className="m-4 font-bold text-lg">ENJOY OUR PARADISE</h2>
 
       <div className="flex justify-evenly flex-col lg:flex-row">
           
@@ -158,7 +180,12 @@ function Home() {
 
       <Review />
 
-      <button onClick={top} className="btn btn-sm m-2 btn-neutral">
+      <button
+        onClick={topFunction}
+        id="myBtn"
+        className={showBtn}
+        title="Go to top"
+      >
         Top
       </button>
 
