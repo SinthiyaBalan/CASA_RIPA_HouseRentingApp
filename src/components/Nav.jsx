@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "/src/assets/images/casa-ripa-logo.jpg";
 import CIcon from "@coreui/icons-react";
 import * as icon from "@coreui/icons";
 import { Link } from 'react-router-dom';
@@ -50,7 +49,7 @@ function Nav() {
             </li>
           </ul>
         </div>
-        <img src={logo} alt="Casa ripa logo" />
+        <img src={`https://ik.imagekit.io/Casaripadummy/casa-ripa-logo.jpg?updatedAt=1705922667078`} alt="Casa ripa logo" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-bold text-xl">
