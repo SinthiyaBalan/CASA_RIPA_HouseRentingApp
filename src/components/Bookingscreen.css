@@ -1,0 +1,31 @@
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-wrapper label {
+    margin-bottom: 10px;
+  }
+  
+  .name,
+  .message {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .send-btn {
+    background-color: #4caf50;
+    color: rgb(20, 19, 19);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Add additional styling as needed */
+  
