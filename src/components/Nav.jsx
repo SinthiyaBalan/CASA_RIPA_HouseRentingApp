@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "/src/assets/images/casa-ripa-logo.jpg";
 import CIcon from "@coreui/icons-react";
 import * as icon from "@coreui/icons";
 import { Link } from 'react-router-dom';
@@ -35,18 +34,12 @@ function Nav() {
               <Link to="/">HOME</Link>
             </li>
             <li>
-              <a>ABOUT US</a>
-              <ul className="p-0">
-                <li>
-                  <a>Route to Us</a>
+              
+                <Link to="/GalleryImages">GALLERY</Link>
                 </li>
-                <li>
-                <Link to="/GalleryImages">Gallery</Link>
-                </li>
-              </ul>
-            </li>
+              
             <li>
-              <Link to="/Contact">CONTACT</Link>
+              <Link to="/Contact" target="_top">CONTACT</Link>
             </li>
             <li>
             <Link to="/ExploreSurroundings">ACTIVITIES TO DO</Link>
@@ -56,31 +49,21 @@ function Nav() {
             </li>
           </ul>
         </div>
-        <img src={logo} alt="Casa ripa logo" />
+        <img src={`https://ik.imagekit.io/Casaripadummy/casa-ripa-logo.jpg?updatedAt=1705922667078`} alt="Casa ripa logo" />
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 font-bold">
+        <ul className="menu menu-horizontal px-1 font-bold text-xl">
           <li>
-          <Link to="/">HOME</Link>
-          </li>
-          <li tabIndex={0}>
-            <details>
-              <summary>ABOUT US</summary>
-              <ul className="p-2">
-                <li>
-                  {/* <Link to="/Route">Route to Us</Link> */}
-                </li>
-                <li>
-                <Link to="/GalleryImages">Gallery</Link>
-                </li>
-              </ul>
-            </details>
+          <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/Contact">CONTACT</Link>
+             <Link to="/GalleryImages">Gallery</Link>
           </li>
           <li>
-          <Link to="/ExploreSurroundings">ACTIVITIES TO DO</Link>
+            <Link to="/Contact" target="_top">Contact</Link>
+          </li>
+          <li>
+          <Link to="/ExploreSurroundings">Activities to do</Link>
             </li>
             <li>
           <Link to="/FAQ">FAQ</Link>
@@ -89,11 +72,11 @@ function Nav() {
       </div>
       <div className="navbar-end gap-4">
       <Link to="/Booking">
-        <a style={{ backgroundColor: "#76a745"}}className="hover:bg-blue-700 font-bold  py-2 px-4 rounded ">Book now</a>
+        <a style={{ backgroundColor: "#76a745"}}className="hover:bg-blue-700 font-bold  py-2 px-4 rounded ">Book Now</a>
         </Link>
 
-        <div className="h-8 w-8 m-2">
-          <CIcon icon={icon.cilTranslate} size="sm" />
+        {/* <div className="h-8 w-8 m-2">
+          <CIcon icon={icon.cilTranslate} size="sm" /> */}
           {/* <ul className="menu menu-horizontal px-1">
       <li tabIndex={0}>
           <CIcon icon={icon.cilTranslate} size="xs"/>
@@ -102,8 +85,8 @@ function Nav() {
             <li><a>Deutsch</a></li>
           </ul>
       </li>
-    </ul> */}
-        </div>
+    </ul> 
+        </div>*/}
       </div>
     </div>
   );

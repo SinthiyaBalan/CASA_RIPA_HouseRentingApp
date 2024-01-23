@@ -17,6 +17,7 @@ function Contact() {
       .then((result) => {
           console.log(result.text);
           form.current.reset();
+          alert('ok')
       }, (error) => {
           console.log(error.text);
       }

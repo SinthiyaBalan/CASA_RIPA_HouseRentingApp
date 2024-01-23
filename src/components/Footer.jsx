@@ -20,7 +20,9 @@ function Footer() {
     <a className="">Jasmin Ghubbar</a>
     <a className="">Tannenweg 46</a>
     <a className="">85399 Hallbergmoos</a>
-    <a className="link link-hover h-4 w-4"><CIcon icon={icon.cilEnvelopeClosed} size="sm"/>casaripa.cupra@gmail.com</a><br /><br />
+    <a className="link link-hover h-4 w-4">{/* <CIcon icon={icon.cilEnvelopeClosed} size="sm"/> */}casaripa.cupra@gmail.com</a>
+    <a className="">(0049) 179 294 64 32</a><br /><br />
+
     <div><p>Copy right @ CASA RIPA, Italy - Created with ReDI Lab</p></div>
   </div> 
   <div>
