@@ -3,27 +3,18 @@ import emailjs from '@emailjs/browser';
 import './Bookingscreen.css';
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import moment from "moment";
 import Loader from "./Loader";
 import Error from "./Error";
 
-// import EmailSender from "./Emailsender"; // Adjust the import path accordingly
-
 function Bookingscreen() {
   const [checkedItems, setCheckedItems] = useState({}); // State to track checked items
-
   const handleCheckboxChange = (itemName) => {
     setCheckedItems(prevState => ({
       ...prevState,
-      [itemName]: !prevState[itemName] // Toggle the checked state
+      [itemName]: !prevState[itemName] 
     }));
   };
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   // Do something with the checked items (e.g., send to the server)
-  //   console.log('Checked items:', checkedItems);
-  // };
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -43,15 +34,10 @@ function Bookingscreen() {
       
       );
     };
-  const { roomid, fromdate, todate } = useParams();
-  const formRef = useRef();
+  const { roomid} = useParams();
   const [room, setRoom] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const fromdateMoment = moment(fromdate, "DD-MM-YYYY");
-  const todateMoment = moment(todate, "DD-MM-YYYY");
-  const totaldays = moment.duration(todateMoment.diff(fromdateMoment)).asDays() + 1;
-  const [totalAmount, setTotalAmount] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -63,8 +49,7 @@ function Bookingscreen() {
           { roomid: roomid.toString() }
         );
         setRoom(response.data);
-        const newTotalAmount = totaldays * response.data.renterpay;
-        setTotalAmount(newTotalAmount);
+      
         setLoading(false);
       } catch (error) {
         setError(true);
@@ -73,15 +58,13 @@ function Bookingscreen() {
       }
     };
     fetchData();
-  }, [roomid, totaldays]);
+  }, [roomid]);
+ 
 
   const bookRoom = async () => {
     const bookingDetails = {
       roomid: room._id,
-      fromdate,
-      todate,
-      totalAmount,
-      totaldays,
+    
     };
 
     try {
@@ -92,7 +75,7 @@ function Bookingscreen() {
 
       if (result.data && result.data.success) {
         console.log("Booking successful!");
-        // Optionally, you can trigger the email sending here as well
+        
       } else {
         console.error("Booking failed:", result.data.message);
       }
@@ -108,7 +91,6 @@ function Bookingscreen() {
         <Loader />
       ) : room ? (
         <>
-        {/* <h1> {room.Name}</h1> */}
           <div className="flex">
             {room.imageurls && room.imageurls.length > 0 && (
               <img src={room.imageurls[0]} alt={room.Name} />
