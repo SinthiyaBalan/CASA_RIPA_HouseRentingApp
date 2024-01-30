@@ -36,9 +36,10 @@ function App() {
         />
         <Route path="/Booking" element={<Booking />} />
         <Route
-          path="/book/:roomid/:fromdate/:todate"
+          path="/book/:roomid"  
           element={<Bookingscreen />}
         />
+    
         <Route path="/AdminHome" element={<AdminHome user={user} />} />
      
         <Route path='/GalleryImages' element={<Gallery/>} />
