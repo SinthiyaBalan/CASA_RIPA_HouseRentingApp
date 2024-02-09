@@ -26,7 +26,7 @@ function Room({ room }) {
               </div>
 
               {/* Google Calendar API */}
-              <Calendar room={room}/>
+              <Calendar CalID={room.CalendarID}/>
 
             </div>
             <div className="m-4 sm:flex flex-col lg: flex flex-row gap-2">
