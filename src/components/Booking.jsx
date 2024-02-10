@@ -19,7 +19,7 @@ function Booking() {
         const data = (
           await axios.get("http://localhost:8080/api/rooms/getallrooms")
         ).data;
-        console.log(data);
+        // console.log(data);
         setrooms(data);
         setloading(false);
       } catch (error) {
