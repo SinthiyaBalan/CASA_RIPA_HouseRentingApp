@@ -31,21 +31,21 @@ function Nav() {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-bold"
           >
             <li>
-              <Link to="/">HOME</Link>
+              <Link to="/" target="_top">HOME</Link>
             </li>
             <li>
               
-                <Link to="/GalleryImages">GALLERY</Link>
+                <Link to="/GalleryImages" target="_top">GALLERY</Link>
                 </li>
               
             <li>
               <Link to="/Contact" target="_top">CONTACT</Link>
             </li>
             <li>
-            <Link to="/ExploreSurroundings">ACTIVITIES TO DO</Link>
+            <Link to="/ExploreSurroundings" target="_top">ACTIVITIES TO DO</Link>
             </li>
             <li>
-            <Link to="/FAQ">FAQ</Link>
+            <Link to="/FAQ" target="_top">FAQ</Link>
             </li>
           </ul>
         </div>
@@ -57,13 +57,13 @@ function Nav() {
           <Link to="/">Home</Link>
           </li>
           <li>
-             <Link to="/GalleryImages">Gallery</Link>
+             <Link to="/GalleryImages" target="_top">Gallery</Link>
           </li>
           <li>
             <Link to="/Contact" target="_top">Contact</Link>
           </li>
           <li>
-          <Link to="/ExploreSurroundings">Activities to do</Link>
+          <Link to="/ExploreSurroundings" target="_top">Activities to do</Link>
             </li>
             <li>
           <Link to="/FAQ">FAQ</Link>
