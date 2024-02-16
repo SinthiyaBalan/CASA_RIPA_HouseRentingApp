@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import FAQ from "./components/FAQ";
 import faqData from "./data/faq.json";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import ExploreSurroundings from "./components/ExploreSurroundings";
 import AdminLogin from "./components/AdminLogin";
 import loginData from "./data/loginDetails.json";
@@ -15,8 +15,6 @@ import Booking from './components/Booking'
 import Bookingscreen from './components/Bookingscreen'
 import Gallery from './components/Gallery';
 import GoogleMap from "./components/GoogleMap";
-
-
 
 function App() {
   const [user, setUser] = useState();

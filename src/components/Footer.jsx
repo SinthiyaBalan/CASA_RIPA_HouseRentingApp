@@ -21,9 +21,9 @@ function Footer() {
     <a className="">Tannenweg 46</a>
     <a className="">85399 Hallbergmoos</a>
     <a className="link link-hover h-4 w-4">{/* <CIcon icon={icon.cilEnvelopeClosed} size="sm"/> */}casaripa.cupra@gmail.com</a>
-    <a className="">(0049) 179 294 64 32</a><br /><br />
+    <a className="">(0049) 179 294 64 32</a><br />
 
-    <div><p>Copy right @ CASA RIPA, Italy - Created with ReDI Lab</p></div>
+    <div><p>Copy right @ CASA RIPA, Italy - Created with ReDI Lab, 2024</p></div>
   </div> 
   <div>
     <span className="footer-title">Follow Us</span> 
@@ -35,7 +35,6 @@ function Footer() {
       
     </div><br />
   </div>
-  {/* <div><p>Copy right @ CASA RIPA, Italy - Created with ReDI Lab</p></div> */}
 </footer>
  
  </>

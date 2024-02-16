@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+
 import Calendar from "./Calendar";
 
 function Room({ room }) {
   return (
     <>
-      <div className="conatiner">
+      <div className="container">
         <div className="ml-36 mb-4 sm:flex flex-col lg:flex justify-center  gap-2 border-solid border-2 border-white-600">
           <div className="div lg:flex">
             <img
@@ -14,8 +15,6 @@ function Room({ room }) {
               style={{ width: 500, height: 300, padding: 10 }}
             />
             <div className="div">
-
-              {/* Google Calendar embeded */}
               <div className="div">
                 <iframe
                   className="calendar"
@@ -25,17 +24,17 @@ function Room({ room }) {
                 ></iframe>
               </div>
 
+
               {/* Google Calendar API */}
               <Calendar CalID={room.CalendarID}/>
 
             </div>
             <div className="m-4 sm:flex flex-col lg: flex flex-row gap-2">
               <h1>Name: {room.Name}</h1>
-              <p>Description: {room.Description}</p>
               <p>MaxCount: {room.MaxCount}</p>
-              <p>Type: {room.Type}</p>
-              <p>Rent: {room.renterpay}€ per day</p>
-              <p>Rent: Rate according calendar price info per day</p>
+
+              <p>Description: {room.Description}</p>
+
               <div className="m-2">
                 <Link to={`/book/${room._id}`}>
                   {/* <Link to ={'/ContactPage'}> */}
