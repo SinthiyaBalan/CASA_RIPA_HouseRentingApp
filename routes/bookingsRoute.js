@@ -7,22 +7,12 @@ const router = express.Router();
 router.post('/bookroom', async (req, res) => {
   const {
     roomid,
-    // userid,
-    // fromdate,
-    // todate,
-    // totalAmount,
-    // totaldays
   } = req.body;
 
   try {
     // Create a new booking document and save it to the database
     const newBooking = new Booking({
       roomid,
-      // userid,
-      // fromdate,
-      // todate,
-      // totalAmount,
-      // totaldays
     });
 
     const booking = await newBooking.save();
