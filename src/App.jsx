@@ -14,6 +14,7 @@ import Contact from './components/Contact'
 import Booking from './components/Booking'
 import Bookingscreen from './components/Bookingscreen'
 import Gallery from './components/Gallery';
+import GoogleMap from "./components/GoogleMap";
 
 
 
@@ -43,7 +44,7 @@ function App() {
         <Route path="/AdminHome" element={<AdminHome user={user} />} />
      
         <Route path='/GalleryImages' element={<Gallery/>} />
-        
+        <Route path='/GoogleMap' element={<GoogleMap/>} />
       </Routes>
       <Footer />
     </>
