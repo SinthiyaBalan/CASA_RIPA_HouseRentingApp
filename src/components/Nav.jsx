@@ -48,7 +48,7 @@ function Nav() {
 
              <Link to="/GoogleMap" target="_top">ROUTE TO US</Link>
             </li>
-           
+            <li>
           <Link to="/FAQ" target="_top">FAQ</Link>
 
             </li>
