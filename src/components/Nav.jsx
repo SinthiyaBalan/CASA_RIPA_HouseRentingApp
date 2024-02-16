@@ -45,10 +45,9 @@ function Nav() {
             <Link to="/ExploreSurroundings" target="_top">ACTIVITIES TO DO</Link>
             </li>
             <li>
-
              <Link to="/GoogleMap" target="_top">ROUTE TO US</Link>
             </li>
-           
+            <li>
           <Link to="/FAQ" target="_top">FAQ</Link>
 
             </li>
