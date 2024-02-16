@@ -9,7 +9,7 @@ function Footer() {
   <div>
     <span className="footer-title">Find out more</span> 
     <a className="link link-hover">About CASA RIPA</a>
-    <a className="link link-hover">Route to Us</a>
+    <a className="link link-hover"><Link to="/GoogleMap">Route to Us</Link></a>
     <a className="link link-hover"><Link to="/FAQ">FAQ's</Link></a>
     <a className="link link-hover"><Link to="/GalleryImages">Gallery</Link></a>
     <a className="link link-hover"><Link to="/AdminLogin">Admin</Link></a>

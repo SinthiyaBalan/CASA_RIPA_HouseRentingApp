@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
+import Calendar from "./Calendar";
+
 function Room({ room }) {
   return (
     <>
@@ -21,11 +23,18 @@ function Room({ room }) {
                   // src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FBerlin&hl=en_GB&showTz=0&showCalendars=0&showTabs=0&showTitle=1&src=ZDcwNThkOWQzODM5YzczZDYzNTM1Y2IxY2U5MDE4OWMwNjA2NTMzNmYyZjAzYjU0NzE5ZjAxMGI2NTVkMGYwYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00"
                 ></iframe>
               </div>
+
+
+              {/* Google Calendar API */}
+              <Calendar CalID={room.CalendarID}/>
+
             </div>
             <div className="m-4 sm:flex flex-col lg: flex flex-row gap-2">
               <h1>Name: {room.Name}</h1>
               <p>MaxCount: {room.MaxCount}</p>
+
               <p>Description: {room.Description}</p>
+
               <div className="m-2">
                 <Link to={`/book/${room._id}`}>
                   {/* <Link to ={'/ContactPage'}> */}

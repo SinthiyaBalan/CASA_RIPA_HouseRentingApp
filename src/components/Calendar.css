@@ -1,0 +1,72 @@
+#root {
+    margin: 0;
+    padding: 0;
+  }
+  .calendar {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    min-height: 50vh;
+    /* width: 100%; */
+  }
+  .button-today {
+    color: white;
+    /* background-color: cornflowerblue; */
+    background-color: #2b3139;
+    padding: 0.25rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+  }
+  .calendar-area {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+  }
+  .calendar-area > div {
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    min-width: 3rem;
+    cursor: pointer;
+  }
+  .calendar-area-today {
+    grid-column: 3 / span 3;
+    color: white;
+    /* background-color: cornflowerblue; */
+  }
+  .calendar-dates:hover {
+    color: black;
+    background-color: lightgray;
+  }
+  
+  .today {
+    color: white;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+  }
+  .selected {
+    color: white;
+    background-color: darkgray;
+    border-radius: 0.5rem;
+  }
+    
+  .room-free {
+    background-color: #76a745;
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: .25rem;
+    margin: auto;
+    color: white;
+  }
+  .todayGoogle {
+    color: white;
+    background-color: cornflowerblue;
+    border-radius: .5rem;
+  }
+
