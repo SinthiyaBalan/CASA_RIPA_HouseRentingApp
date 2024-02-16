@@ -8,6 +8,7 @@ import axios from "axios";
 import Loader from "./Loader";
 import Error from "./Error";
 
+
 function Bookingscreen() {
   const [checkedItems, setCheckedItems] = useState({});
   const handleCheckboxChange = (itemName) => {
@@ -104,13 +105,13 @@ function Bookingscreen() {
         <Loader />
       ) : room ? (
         <>
-          <div className="flex flex-col justify-around gap-4 basis-1/4 md:basis-1/2 md:flex-row lg:flex-row">
-            <div className="ml-16">
+          <div className="flex flex-col gap-4 md:flex-row lg:flex-row">
+            <div>
               {room.imageurls && room.imageurls.length > 0 && (
                 <img
                   src={room.imageurls[0]}
                   alt={room.Name}
-                  style={{ width: 600, height: 400 }}
+                  className="room-image"
                 />
               )}
               <br />
@@ -118,59 +119,48 @@ function Bookingscreen() {
                 <img
                   src={room.imageurls[1]}
                   alt={room.Name}
-                  style={{ width: 600, height: 400 }}
+                  className="room-image"
                 />
               )}
-
               <br />
               <div className="sm:w-100 md:basis-1/2 lg:basis-1/2">
                 {room.imageurls && room.imageurls.length > 2 && (
                   <img
                     src={room.imageurls[2]}
                     alt={room.Name}
-                    style={{ width: 600, height: 400 }}
+                    className="room-image"
                   />
                 )}
                 <br />
               </div>
             </div>
-            <div
-              className="contact-container"
-              style={{ width: 800, height: 1200 }}
-            >
-              <h2 className="decoration-sky-500 mt-0 mb-5 text-lg font-bold ">
-                Booking details
-                <br />
+            <div className="contact-container">
+              <h2 className="decoration-sky-500 mt-0 mb-5 text-lg font-bold">
+                Booking details <br />
                 {room.Name}
               </h2>
               <form className="form-wrapper" ref={form} onSubmit={sendEmail}>
-                <label htmlFor="user_name">
-                  Enter your Name:
-                  <input
-                    type="text"
-                    className="name"
-                    name="user_name"
-                    placeholder=" * Name"
-                  />
-                </label>
-                <label htmlFor="user_email">
-                  Enter your Email:
-                  <input
-                    type="email"
-                    className="name"
-                    name="user_email"
-                    placeholder=" * Email"
-                  />
-                </label>
-                <label htmlFor="user_phone_number">
-                  Enter Phone Number:
-                  <input
-                    type="number"
-                    className="name"
-                    name="user_phone_number"
-                    placeholder=" * Phone Number"
-                  />
-                </label>
+                <label htmlFor="user_name">Enter your Name:</label>
+                <input
+                  type="text"
+                  className="name"
+                  name="user_name"
+                  placeholder=" * Name"
+                />
+                <label htmlFor="user_email">Enter your Email:</label>
+                <input
+                  type="email"
+                  className="name"
+                  name="user_email"
+                  placeholder=" * Email"
+                />
+                <label htmlFor="user_phone_number">Enter Phone Number:</label>
+                <input
+                  type="number"
+                  className="name"
+                  name="user_phone_number"
+                  placeholder=" * Phone Number"
+                />
                 <div>
                   <label>Select From Date:</label>
                   <DatePicker
@@ -207,23 +197,17 @@ function Bookingscreen() {
                   Extra Kid's Bed
                 </label>
                 <br />
-                <label htmlFor="message">
-                  Enter your Message:
-                  <textarea
-                    className="message"
-                    name="message"
-                    placeholder=" * Write Your Query"
-                    rows={4}
-                  />
-                </label>
+                <label htmlFor="message">Enter your Message:</label>
+                <textarea
+                  className="message"
+                  name="message"
+                  placeholder=" * Write Your Query"
+                  rows={4}
+                />
                 <br />
-                <button
-                  type="submit"
-                  className="mt-0  ml-32 text-lg font-bold send-btn"
-                >
+                <button type="submit" className="send-btn">
                   Submit
                 </button>
-                <br />
               </form>
               <h1>
                 *Thank you for choosing to stay at our place. We will revert

@@ -1,31 +1,58 @@
 .contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.room-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  max-height: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .room-image {
+    max-width: 400px;
+    max-height: 300px;
   }
-  
-  .form-wrapper {
-    display: flex;
-    flex-direction: column;
+}
+
+@media screen and (max-width: 480px) {
+  .room-image {
+    max-width: 300px;
+    max-height: 200px;
   }
-  
-  .form-wrapper label {
-    margin-bottom: 10px;
-  }
-  
-  .name,
-  .message {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-  }
-  
-  .send-btn {
-    background-color: #4caf50;
-    color: rgb(20, 19, 19);
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  /* Add additional styling as needed */
-  
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px; /* Added margin top for better spacing */
+}
+
+.form-wrapper label {
+  margin-bottom: 10px;
+}
+
+.name,
+.message {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Added border for better visual separation */
+}
+
+.send-btn {
+  background-color: #4caf50;
+  color: #0a0a0b;
+  padding: 10px;
+  cursor: pointer;
+  border: none; /* Removed border */
+  border-radius: 5px; /* Added border-radius for rounded corners */
+  transition: background-color 0.3s; /* Added transition for smooth hover effect */
+}
+
+.send-btn:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
