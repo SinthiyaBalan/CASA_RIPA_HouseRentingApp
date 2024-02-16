@@ -45,6 +45,9 @@ function Nav() {
             <Link to="/ExploreSurroundings">ACTIVITIES TO DO</Link>
             </li>
             <li>
+             <Link to="/GoogleMap">ROUTE TO US</Link>
+            </li>
+            <li>
             <Link to="/FAQ">FAQ</Link>
             </li>
           </ul>
@@ -65,6 +68,9 @@ function Nav() {
           <li>
           <Link to="/ExploreSurroundings">Activities to do</Link>
             </li>
+            <li>
+             <Link to="/GoogleMap">Route to us</Link>
+          </li>
             <li>
           <Link to="/FAQ">FAQ</Link>
             </li>
