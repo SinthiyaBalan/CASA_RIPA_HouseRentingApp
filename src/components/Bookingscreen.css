@@ -44,13 +44,18 @@
 }
 
 .send-btn {
-  background-color: #4caf50;
-  color: #0a0a0b;
-  padding: 10px;
-  cursor: pointer;
-  border: none; /* Removed border */
-  border-radius: 5px; /* Added border-radius for rounded corners */
-  transition: background-color 0.3s; /* Added transition for smooth hover effect */
+   margin-top: 5px;
+    height: 40px;
+    width: 110px;
+    font-size: larger;
+    font-weight: bolder;
+    color: darkgreen;
+    background-color: bisque;
+    border: 3px solid gray;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 80px;
+    border-radius: 5%;
 }
 
 .send-btn:hover {

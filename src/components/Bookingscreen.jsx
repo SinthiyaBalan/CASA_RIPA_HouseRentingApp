@@ -19,8 +19,9 @@ function Bookingscreen() {
   };
 
   const form = useRef();
-  const [fromDate, setFromDate] = useState(null);
-  const [toDate, setToDate] = useState(null);
+  const [fromDate, setFromDate] = useState("");
+  const [toDate, setToDate] = useState("");
+  
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -28,21 +29,19 @@ function Bookingscreen() {
       alert("Please select valid From and To dates.");
       return;
     }
-    const formData = new FormData(form.current);
-    formData.append("from_date", fromDate.toDateString());
-    formData.append("to_date", toDate.toDateString());
-
+    
     emailjs
       .sendForm(
         "service_3aqzjic",
         "template_q80d69v",
-        formData,
+        form.current,
         "nHlSdNaHTrzGYLWC0"
       )
       .then(
         (result) => {
           console.log(result.text);
           form.current.reset();
+         
           alert(
             "Email sent successfully! Thank you for choosing to stay at our place. We will revert soon!"
           );
@@ -135,11 +134,13 @@ function Bookingscreen() {
               </div>
             </div>
             <div className="contact-container">
+              
+              <form className="form-wrapper" ref={form} onSubmit={sendEmail}>
               <h2 className="decoration-sky-500 mt-0 mb-5 text-lg font-bold">
                 Booking details <br />
-                {room.Name}
+                <label htmlFor="room_name">{room.Name}</label>
+                <input type="hidden" name="room_name" value={room.Name} />
               </h2>
-              <form className="form-wrapper" ref={form} onSubmit={sendEmail}>
                 <label htmlFor="user_name">Enter your Name:</label>
                 <input
                   type="text"
@@ -162,19 +163,27 @@ function Bookingscreen() {
                   placeholder=" * Phone Number"
                 />
                 <div>
-                  <label>Select From Date:</label>
-                  <DatePicker
+                  <label htmlFor="fromDate">Select From Date:
+                  <DatePicker name="fromDate"
                     selected={fromDate}
                     onChange={(date) => setFromDate(date)}
-                  />
+                  /></label>
                 </div>
                 <br />
                 <div>
-                  <label>Select To Date:</label>
-                  <DatePicker
+                  <label htmlFor="toDate">Select To Date:
+                  <DatePicker name="toDate"
                     selected={toDate}
                     onChange={(date) => setToDate(date)}
-                  />
+                  /></label>
+                   {/* <DatePicker
+                      dateFormat="dd/MM/yyyy"
+                      selected={toDate}
+                      onChange={(date) => {
+                      const d = new Date(date).toLocaleDateString('fr-FR');
+                      console.log(d);
+                      setToDate(date);
+                  }}/> */}
                 </div>
                 <br />
                 <label>
