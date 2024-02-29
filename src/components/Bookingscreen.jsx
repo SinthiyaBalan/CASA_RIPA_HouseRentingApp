@@ -41,7 +41,8 @@ function Bookingscreen() {
         (result) => {
           console.log(result.text);
           form.current.reset();
-         
+          setFromDate("");
+          setToDate("");
           alert(
             "Email sent successfully! Thank you for choosing to stay at our place. We will revert soon!"
           );
@@ -104,7 +105,7 @@ function Bookingscreen() {
         <Loader />
       ) : room ? (
         <>
-          <div className="flex flex-col gap-4 md:flex-row lg:flex-row">
+          <div className="flex flex-col gap-4 m-10 md:flex-row lg:flex-row m-4">
             <div>
               {room.imageurls && room.imageurls.length > 0 && (
                 <img
@@ -137,7 +138,7 @@ function Bookingscreen() {
               
               <form className="form-wrapper" ref={form} onSubmit={sendEmail}>
               <h2 className="decoration-sky-500 mt-0 mb-5 text-lg font-bold">
-                Booking details <br />
+                Booking details   <br />
                 <label htmlFor="room_name">{room.Name}</label>
                 <input type="hidden" name="room_name" value={room.Name} />
               </h2>
@@ -176,14 +177,7 @@ function Bookingscreen() {
                     selected={toDate}
                     onChange={(date) => setToDate(date)}
                   /></label>
-                   {/* <DatePicker
-                      dateFormat="dd/MM/yyyy"
-                      selected={toDate}
-                      onChange={(date) => {
-                      const d = new Date(date).toLocaleDateString('fr-FR');
-                      console.log(d);
-                      setToDate(date);
-                  }}/> */}
+                   
                 </div>
                 <br />
                 <label>
@@ -214,12 +208,12 @@ function Bookingscreen() {
                   rows={4}
                 />
                 <br />
-                <button type="submit" className="send-btn">
+                <button type="submit" className="send-btn-submit">
                   Submit
                 </button>
               </form>
               <h1>
-                *Thank you for choosing to stay at our place. We will revert
+                Thank you for choosing to stay at our place. We will revert
                 soon!
               </h1>
             </div>

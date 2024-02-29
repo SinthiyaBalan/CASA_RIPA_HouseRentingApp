@@ -43,7 +43,7 @@
   border: 1px solid #ccc; /* Added border for better visual separation */
 }
 
-.send-btn {
+.send-btn-submit {
    margin-top: 5px;
     height: 40px;
     width: 110px;
@@ -54,10 +54,11 @@
     border: 3px solid gray;
     cursor: pointer;
     text-align: center;
-    margin-left: 80px;
+    margin-left: 50px;
     border-radius: 5%;
+    margin-bottom: 5px;
 }
 
-.send-btn:hover {
+.send-btn-submit:hover {
   background-color: #45a049; /* Darker shade on hover */
 }
