@@ -19,8 +19,9 @@ function Bookingscreen() {
   };
 
   const form = useRef();
-  const [fromDate, setFromDate] = useState(null);
-  const [toDate, setToDate] = useState(null);
+  const [fromDate, setFromDate] = useState("");
+  const [toDate, setToDate] = useState("");
+  
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -28,21 +29,20 @@ function Bookingscreen() {
       alert("Please select valid From and To dates.");
       return;
     }
-    const formData = new FormData(form.current);
-    formData.append("from_date", fromDate.toDateString());
-    formData.append("to_date", toDate.toDateString());
-
+    
     emailjs
       .sendForm(
         "service_3aqzjic",
         "template_q80d69v",
-        formData,
+        form.current,
         "nHlSdNaHTrzGYLWC0"
       )
       .then(
         (result) => {
           console.log(result.text);
           form.current.reset();
+          setFromDate("");
+          setToDate("");
           alert(
             "Email sent successfully! Thank you for choosing to stay at our place. We will revert soon!"
           );
@@ -105,7 +105,7 @@ function Bookingscreen() {
         <Loader />
       ) : room ? (
         <>
-          <div className="flex flex-col gap-4 md:flex-row lg:flex-row">
+          <div className="flex flex-col gap-4 m-10 md:flex-row lg:flex-row m-4">
             <div>
               {room.imageurls && room.imageurls.length > 0 && (
                 <img
@@ -135,11 +135,13 @@ function Bookingscreen() {
               </div>
             </div>
             <div className="contact-container">
-              <h2 className="decoration-sky-500 mt-0 mb-5 text-lg font-bold">
-                Booking details <br />
-                {room.Name}
-              </h2>
+              
               <form className="form-wrapper" ref={form} onSubmit={sendEmail}>
+              <h2 className="decoration-sky-500 mt-0 mb-5 text-lg font-bold">
+                Booking details   <br />
+                <label htmlFor="room_name">{room.Name}</label>
+                <input type="hidden" name="room_name" value={room.Name} />
+              </h2>
                 <label htmlFor="user_name">Enter your Name:</label>
                 <input
                   type="text"
@@ -162,19 +164,20 @@ function Bookingscreen() {
                   placeholder=" * Phone Number"
                 />
                 <div>
-                  <label>Select From Date:</label>
-                  <DatePicker
+                  <label htmlFor="fromDate">Select From Date:
+                  <DatePicker name="fromDate"
                     selected={fromDate}
                     onChange={(date) => setFromDate(date)}
-                  />
+                  /></label>
                 </div>
                 <br />
                 <div>
-                  <label>Select To Date:</label>
-                  <DatePicker
+                  <label htmlFor="toDate">Select To Date:
+                  <DatePicker name="toDate"
                     selected={toDate}
                     onChange={(date) => setToDate(date)}
-                  />
+                  /></label>
+                   
                 </div>
                 <br />
                 <label>
@@ -205,12 +208,12 @@ function Bookingscreen() {
                   rows={4}
                 />
                 <br />
-                <button type="submit" className="send-btn">
+                <button type="submit" className="send-btn-submit">
                   Submit
                 </button>
               </form>
               <h1>
-                *Thank you for choosing to stay at our place. We will revert
+                Thank you for choosing to stay at our place. We will revert
                 soon!
               </h1>
             </div>
